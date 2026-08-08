@@ -1,0 +1,26 @@
+[project]
+name = "dev-ops-sim"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Chaitanya", email = "puranikc@sheridancollege.ca" }
+]
+requires-python = ">=3.12"
+
+#run "uv sync" after adding dependencies manually or use "uv add [dependency]"
+dependencies = [
+    "fastapi>=0.141.1",
+    "networkx>=3.6.1",
+    "pydantic>=2.13.4",
+    "pydantic-settings>=2.15.0",
+    "simpy>=4.1.2",
+    "uvicorn[standard]>=0.52.1",
+]
+
+[project.scripts]
+dev-ops-sim = "dev_ops_sim:main"
+
+[build-system]
+requires = ["uv_build>=0.12.3,<0.13.0"]
+build-backend = "uv_build"
