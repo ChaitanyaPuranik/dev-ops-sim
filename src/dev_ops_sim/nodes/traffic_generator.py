@@ -4,9 +4,24 @@ from dev_ops_sim.core.request import Request
 
 @dataclass
 class TrafficGeneratorConfig:
-    rate: float
-    pattern: str
-    duration: float
+    """
+    Configuration for the TrafficGenerator.
+    """
+    
+    rate: float 
+    '''
+    rate(float): Number of requests generated per simulated second. (requests/second)
+    '''
+    
+    pattern: str 
+    '''
+    pattern(str): Defines how requests arrive over time.
+    '''
+    
+    duration: float 
+    '''
+    duration(float): Amount of simulated time, in seconds, for which traffic is generated.
+    '''
 
     def __post_init__(self):
         if self.rate <= 0:
