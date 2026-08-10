@@ -2,7 +2,7 @@
 name = "dev-ops-sim"
 version = "0.1.0"
 description = "Add your description here"
-readme = "README.md"
+#readme = "README.md"
 authors = [
     { name = "Chaitanya", email = "puranikc@sheridancollege.ca" }
 ]
@@ -15,6 +15,7 @@ dependencies = [
     "pydantic>=2.13.4",
     "pydantic-settings>=2.15.0",
     "simpy>=4.1.2",
+    "streamlit>=1.61.1",
     "uvicorn[standard]>=0.52.1",
 ]
 
