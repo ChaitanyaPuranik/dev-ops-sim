@@ -2,7 +2,9 @@ import streamlit as st
 
 from dev_ops_sim.st_ui.icons import (
     TRAFFIC_GENERATOR_ICON,
+    LOAD_BALANCER_ICON,
     APPLICATION_SERVER_ICON,
+    DATABASE_ICON,
 )
 
 
@@ -13,10 +15,22 @@ def render_topology(
 
     st.header("Simulation")
 
-    request_label = (
+    traffic_to_balancer = (
         f"{result['generated']} requests"
         if result
         else "Requests"
+    )
+
+    balancer_to_server = (
+        f"{result['balancer_forwarded']} forwarded"
+        if result
+        else "Forwarded"
+    )
+
+    server_to_database = (
+        f"{result['completed']} processed"
+        if result
+        else "Processed"
     )
 
     st.html(
@@ -50,7 +64,46 @@ def render_topology(
             <div class="request-flow">
 
                 <div class="request-flow-label">
-                    {request_label}
+                    {traffic_to_balancer}
+                </div>
+
+                <div class="flow-line">
+                    <div class="request-dot"></div>
+                    <div class="request-dot"></div>
+                    <div class="request-dot"></div>
+                </div>
+
+            </div>
+
+
+            <div class="simulation-node">
+
+                {LOAD_BALANCER_ICON}
+
+                <h3>Load Balancer</h3>
+
+                <p>
+                    <strong>Algorithm:</strong>
+                    {config["load_balancer_algorithm"]}
+                </p>
+
+                <p>
+                    <strong>Received:</strong>
+                    {result["balancer_received"] if result else "-"}
+                </p>
+
+                <p>
+                    <strong>Forwarded:</strong>
+                    {result["balancer_forwarded"] if result else "-"}
+                </p>
+
+            </div>
+
+
+            <div class="request-flow">
+
+                <div class="request-flow-label">
+                    {balancer_to_server}
                 </div>
 
                 <div class="flow-line">
@@ -76,6 +129,45 @@ def render_topology(
                 <p>
                     <strong>Processing Time:</strong>
                     {config["processing_time"]:.2f}s
+                </p>
+
+            </div>
+
+
+            <div class="request-flow">
+
+                <div class="request-flow-label">
+                    {server_to_database}
+                </div>
+
+                <div class="flow-line">
+                    <div class="request-dot"></div>
+                    <div class="request-dot"></div>
+                    <div class="request-dot"></div>
+                </div>
+
+            </div>
+
+
+            <div class="simulation-node">
+
+                {DATABASE_ICON}
+
+                <h3>Database</h3>
+
+                <p>
+                    <strong>Capacity:</strong>
+                    {config["database_capacity"]}
+                </p>
+
+                <p>
+                    <strong>Query Time:</strong>
+                    {config["database_query_time"]:.2f}s
+                </p>
+
+                <p>
+                    <strong>Completed:</strong>
+                    {result["database_completed"] if result else "-"}
                 </p>
 
             </div>
