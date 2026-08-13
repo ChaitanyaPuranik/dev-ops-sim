@@ -1,7 +1,7 @@
 import solara
-
+from solara_ui.node_registry import CanvasNode
 @solara.component
-def ConfigurationPanel():
+def ConfigurationPanel(node: CanvasNode | None):
     with solara.Column(
         style={
             "height": "100%",
