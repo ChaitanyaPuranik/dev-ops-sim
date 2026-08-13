@@ -1,1 +1,15 @@
-{"0": "Request", "1": "TrafficGenerator", "2": "ApplicationServer", "3": "LoadBalancer", "4": "app.py", "5": "run_simulation", "6": "__init__.py", "7": "dev-ops-sim", "8": "icons.py"}
+{
+  "0": "Database",
+  "1": "TrafficGeneratorConfig",
+  "2": "ApplicationServerConfig",
+  "3": "run_simulation",
+  "4": "app.py",
+  "5": "Page",
+  "6": "__init__.py",
+  "7": "dev-ops-sim",
+  "8": "icons.py",
+  "9": "Request",
+  "10": "ApplicationServer",
+  "11": "README.md",
+  "12": "INSTALLATION.md"
+}

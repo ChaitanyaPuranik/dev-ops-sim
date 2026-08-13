@@ -4,19 +4,6 @@
   "graph": {},
   "nodes": [
     {
-      "label": "Request",
-      "file_type": "code",
-      "source_file": "src/dev_ops_sim/core/request.py",
-      "source_location": "L4",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 0,
-      "norm_label": "request",
-      "id": "src_dev_ops_sim_core_request_request",
-      "community_name": "Request"
-    },
-    {
       "label": "Database",
       "file_type": "code",
       "source_file": "src/dev_ops_sim/nodes/database_node.py",
@@ -24,10 +11,10 @@
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "community": 0,
-      "norm_label": "database",
       "id": "src_dev_ops_sim_nodes_database_node_database",
-      "community_name": "Request"
+      "community": 0,
+      "community_name": "Database",
+      "norm_label": "database"
     },
     {
       "label": "DatabaseConfig",
@@ -37,23 +24,10 @@
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "community": 0,
-      "norm_label": "databaseconfig",
       "id": "src_dev_ops_sim_nodes_database_node_databaseconfig",
-      "community_name": "Request"
-    },
-    {
-      "label": "TrafficGenerator",
-      "file_type": "code",
-      "source_file": "src/dev_ops_sim/nodes/traffic_generator.py",
-      "source_location": "L38",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 1,
-      "norm_label": "trafficgenerator",
-      "id": "src_dev_ops_sim_nodes_traffic_generator_trafficgenerator",
-      "community_name": "TrafficGenerator"
+      "community": 0,
+      "community_name": "Database",
+      "norm_label": "databaseconfig"
     },
     {
       "label": "TrafficGeneratorConfig",
@@ -63,10 +37,10 @@
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "community": 1,
-      "norm_label": "trafficgeneratorconfig",
       "id": "src_dev_ops_sim_nodes_traffic_generator_trafficgeneratorconfig",
-      "community_name": "TrafficGenerator"
+      "community": 1,
+      "community_name": "TrafficGeneratorConfig",
+      "norm_label": "trafficgeneratorconfig"
     },
     {
       "label": "ApplicationServer",
@@ -76,10 +50,10 @@
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "community": 2,
-      "norm_label": "applicationserver",
       "id": "src_dev_ops_sim_nodes_application_server_applicationserver",
-      "community_name": "ApplicationServer"
+      "community": 10,
+      "community_name": "ApplicationServer",
+      "norm_label": "applicationserver"
     },
     {
       "label": "ApplicationServerConfig",
@@ -89,10 +63,10 @@
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "community": 2,
-      "norm_label": "applicationserverconfig",
       "id": "src_dev_ops_sim_nodes_application_server_applicationserverconfig",
-      "community_name": "ApplicationServer"
+      "community": 2,
+      "community_name": "ApplicationServerConfig",
+      "norm_label": "applicationserverconfig"
     },
     {
       "label": "LoadBalancer",
@@ -102,10 +76,10 @@
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "community": 3,
-      "norm_label": "loadbalancer",
       "id": "src_dev_ops_sim_nodes_load_balancer_loadbalancer",
-      "community_name": "LoadBalancer"
+      "community": 3,
+      "community_name": "run_simulation",
+      "norm_label": "loadbalancer"
     },
     {
       "label": "LoadBalancerConfig",
@@ -115,10 +89,36 @@
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "community": 5,
-      "norm_label": "loadbalancerconfig",
       "id": "src_dev_ops_sim_nodes_load_balancer_loadbalancerconfig",
-      "community_name": "run_simulation"
+      "community": 3,
+      "community_name": "run_simulation",
+      "norm_label": "loadbalancerconfig"
+    },
+    {
+      "label": "Request",
+      "file_type": "code",
+      "source_file": "src/dev_ops_sim/core/request.py",
+      "source_location": "L4",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "src_dev_ops_sim_core_request_request",
+      "community": 9,
+      "community_name": "Request",
+      "norm_label": "request"
+    },
+    {
+      "label": "TrafficGenerator",
+      "file_type": "code",
+      "source_file": "src/dev_ops_sim/nodes/traffic_generator.py",
+      "source_location": "L38",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "src_dev_ops_sim_nodes_traffic_generator_trafficgenerator",
+      "community": 9,
+      "community_name": "Request",
+      "norm_label": "trafficgenerator"
     },
     {
       "label": ".__init__()",
@@ -127,10 +127,10 @@
       "source_location": "L26",
       "_callable": true,
       "_origin": "ast",
-      "community": 0,
-      "norm_label": ".__init__()",
       "id": "src_dev_ops_sim_nodes_database_node_database_init",
-      "community_name": "Request"
+      "community": 0,
+      "community_name": "Database",
+      "norm_label": ".__init__()"
     },
     {
       "label": ".process_request()",
@@ -139,10 +139,10 @@
       "source_location": "L57",
       "_callable": true,
       "_origin": "ast",
-      "community": 0,
-      "norm_label": ".process_request()",
       "id": "src_dev_ops_sim_nodes_database_node_database_process_request",
-      "community_name": "Request"
+      "community": 0,
+      "community_name": "Database",
+      "norm_label": ".process_request()"
     },
     {
       "label": ".run()",
@@ -151,10 +151,10 @@
       "source_location": "L47",
       "_callable": true,
       "_origin": "ast",
-      "community": 0,
-      "norm_label": ".run()",
       "id": "src_dev_ops_sim_nodes_database_node_database_run",
-      "community_name": "Request"
+      "community": 0,
+      "community_name": "Database",
+      "norm_label": ".run()"
     },
     {
       "label": ".__post_init__()",
@@ -163,22 +163,10 @@
       "source_location": "L18",
       "_callable": true,
       "_origin": "ast",
-      "community": 0,
-      "norm_label": ".__post_init__()",
       "id": "src_dev_ops_sim_nodes_database_node_databaseconfig_post_init",
-      "community_name": "Request"
-    },
-    {
-      "label": "main()",
-      "file_type": "code",
-      "source_file": "src/dev_ops_sim/main.py",
-      "source_location": "L18",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "norm_label": "main()",
-      "id": "src_dev_ops_sim_main_main",
-      "community_name": "TrafficGenerator"
+      "community": 0,
+      "community_name": "Database",
+      "norm_label": ".__post_init__()"
     },
     {
       "label": ".__init__()",
@@ -187,22 +175,10 @@
       "source_location": "L39",
       "_callable": true,
       "_origin": "ast",
-      "community": 1,
-      "norm_label": ".__init__()",
       "id": "src_dev_ops_sim_nodes_traffic_generator_trafficgenerator_init",
-      "community_name": "TrafficGenerator"
-    },
-    {
-      "label": ".run()",
-      "file_type": "code",
-      "source_file": "src/dev_ops_sim/nodes/traffic_generator.py",
-      "source_location": "L52",
-      "_callable": true,
-      "_origin": "ast",
       "community": 1,
-      "norm_label": ".run()",
-      "id": "src_dev_ops_sim_nodes_traffic_generator_trafficgenerator_run",
-      "community_name": "TrafficGenerator"
+      "community_name": "TrafficGeneratorConfig",
+      "norm_label": ".__init__()"
     },
     {
       "label": ".__post_init__()",
@@ -211,22 +187,22 @@
       "source_location": "L26",
       "_callable": true,
       "_origin": "ast",
-      "community": 1,
-      "norm_label": ".__post_init__()",
       "id": "src_dev_ops_sim_nodes_traffic_generator_trafficgeneratorconfig_post_init",
-      "community_name": "TrafficGenerator"
+      "community": 1,
+      "community_name": "TrafficGeneratorConfig",
+      "norm_label": ".__post_init__()"
     },
     {
-      "label": ".__init__()",
+      "label": "main()",
       "file_type": "code",
-      "source_file": "src/dev_ops_sim/nodes/application_server.py",
-      "source_location": "L31",
+      "source_file": "src/dev_ops_sim/main.py",
+      "source_location": "L18",
       "_callable": true,
       "_origin": "ast",
-      "community": 2,
-      "norm_label": ".__init__()",
-      "id": "src_dev_ops_sim_nodes_application_server_applicationserver_init",
-      "community_name": "ApplicationServer"
+      "id": "src_dev_ops_sim_main_main",
+      "community": 10,
+      "community_name": "ApplicationServer",
+      "norm_label": "main()"
     },
     {
       "label": ".process_request()",
@@ -235,10 +211,10 @@
       "source_location": "L61",
       "_callable": true,
       "_origin": "ast",
-      "community": 2,
-      "norm_label": ".process_request()",
       "id": "src_dev_ops_sim_nodes_application_server_applicationserver_process_request",
-      "community_name": "ApplicationServer"
+      "community": 10,
+      "community_name": "ApplicationServer",
+      "norm_label": ".process_request()"
     },
     {
       "label": ".run()",
@@ -247,10 +223,22 @@
       "source_location": "L51",
       "_callable": true,
       "_origin": "ast",
-      "community": 2,
-      "norm_label": ".run()",
       "id": "src_dev_ops_sim_nodes_application_server_applicationserver_run",
-      "community_name": "ApplicationServer"
+      "community": 10,
+      "community_name": "ApplicationServer",
+      "norm_label": ".run()"
+    },
+    {
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "src/dev_ops_sim/nodes/application_server.py",
+      "source_location": "L31",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_dev_ops_sim_nodes_application_server_applicationserver_init",
+      "community": 2,
+      "community_name": "ApplicationServerConfig",
+      "norm_label": ".__init__()"
     },
     {
       "label": ".__post_init__()",
@@ -259,10 +247,10 @@
       "source_location": "L21",
       "_callable": true,
       "_origin": "ast",
-      "community": 2,
-      "norm_label": ".__post_init__()",
       "id": "src_dev_ops_sim_nodes_application_server_applicationserverconfig_post_init",
-      "community_name": "ApplicationServer"
+      "community": 2,
+      "community_name": "ApplicationServerConfig",
+      "norm_label": ".__post_init__()"
     },
     {
       "label": "load_balancing_algorithm()",
@@ -271,10 +259,10 @@
       "source_location": "L9",
       "_callable": true,
       "_origin": "ast",
-      "community": 3,
-      "norm_label": "load_balancing_algorithm()",
       "id": "src_dev_ops_sim_nodes_load_balancer_load_balancing_algorithm",
-      "community_name": "LoadBalancer"
+      "community": 3,
+      "community_name": "run_simulation",
+      "norm_label": "load_balancing_algorithm()"
     },
     {
       "label": ".__init__()",
@@ -283,10 +271,10 @@
       "source_location": "L32",
       "_callable": true,
       "_origin": "ast",
-      "community": 3,
-      "norm_label": ".__init__()",
       "id": "src_dev_ops_sim_nodes_load_balancer_loadbalancer_init",
-      "community_name": "LoadBalancer"
+      "community": 3,
+      "community_name": "run_simulation",
+      "norm_label": ".__init__()"
     },
     {
       "label": ".run()",
@@ -295,10 +283,10 @@
       "source_location": "L65",
       "_callable": true,
       "_origin": "ast",
-      "community": 3,
-      "norm_label": ".run()",
       "id": "src_dev_ops_sim_nodes_load_balancer_loadbalancer_run",
-      "community_name": "LoadBalancer"
+      "community": 3,
+      "community_name": "run_simulation",
+      "norm_label": ".run()"
     },
     {
       "label": ".select_backend()",
@@ -307,10 +295,10 @@
       "source_location": "L83",
       "_callable": true,
       "_origin": "ast",
-      "community": 3,
-      "norm_label": ".select_backend()",
       "id": "src_dev_ops_sim_nodes_load_balancer_loadbalancer_select_backend",
-      "community_name": "LoadBalancer"
+      "community": 3,
+      "community_name": "run_simulation",
+      "norm_label": ".select_backend()"
     },
     {
       "label": ".select_random()",
@@ -319,10 +307,10 @@
       "source_location": "L101",
       "_callable": true,
       "_origin": "ast",
-      "community": 3,
-      "norm_label": ".select_random()",
       "id": "src_dev_ops_sim_nodes_load_balancer_loadbalancer_select_random",
-      "community_name": "LoadBalancer"
+      "community": 3,
+      "community_name": "run_simulation",
+      "norm_label": ".select_random()"
     },
     {
       "label": ".select_round_robin()",
@@ -331,58 +319,10 @@
       "source_location": "L91",
       "_callable": true,
       "_origin": "ast",
-      "community": 3,
-      "norm_label": ".select_round_robin()",
       "id": "src_dev_ops_sim_nodes_load_balancer_loadbalancer_select_round_robin",
-      "community_name": "LoadBalancer"
-    },
-    {
-      "label": "render_configuration()",
-      "file_type": "code",
-      "source_file": "src/dev_ops_sim/st_ui/components/configuration.py",
-      "source_location": "L4",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "render_configuration()",
-      "id": "src_dev_ops_sim_st_ui_components_configuration_render_configuration",
-      "community_name": "app.py"
-    },
-    {
-      "label": "render_metrics()",
-      "file_type": "code",
-      "source_file": "src/dev_ops_sim/st_ui/components/metrics.py",
-      "source_location": "L4",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "render_metrics()",
-      "id": "src_dev_ops_sim_st_ui_components_metrics_render_metrics",
-      "community_name": "app.py"
-    },
-    {
-      "label": "render_topology()",
-      "file_type": "code",
-      "source_file": "src/dev_ops_sim/st_ui/components/topology.py",
-      "source_location": "L11",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "render_topology()",
-      "id": "src_dev_ops_sim_st_ui_components_topology_render_topology",
-      "community_name": "app.py"
-    },
-    {
-      "label": "load_styles()",
-      "file_type": "code",
-      "source_file": "src/dev_ops_sim/st_ui/styles.py",
-      "source_location": "L105",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "load_styles()",
-      "id": "src_dev_ops_sim_st_ui_styles_load_styles",
-      "community_name": "app.py"
+      "community": 3,
+      "community_name": "run_simulation",
+      "norm_label": ".select_round_robin()"
     },
     {
       "label": ".__post_init__()",
@@ -391,10 +331,10 @@
       "source_location": "L23",
       "_callable": true,
       "_origin": "ast",
-      "community": 5,
-      "norm_label": ".__post_init__()",
       "id": "src_dev_ops_sim_nodes_load_balancer_loadbalancerconfig_post_init",
-      "community_name": "run_simulation"
+      "community": 3,
+      "community_name": "run_simulation",
+      "norm_label": ".__post_init__()"
     },
     {
       "label": "run_simulation()",
@@ -403,10 +343,130 @@
       "source_location": "L21",
       "_callable": true,
       "_origin": "ast",
-      "community": 5,
-      "norm_label": "run_simulation()",
       "id": "src_dev_ops_sim_st_ui_simulation_run_simulation",
-      "community_name": "run_simulation"
+      "community": 3,
+      "community_name": "run_simulation",
+      "norm_label": "run_simulation()"
+    },
+    {
+      "label": "render_configuration()",
+      "file_type": "code",
+      "source_file": "src/dev_ops_sim/st_ui/components/configuration.py",
+      "source_location": "L4",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_dev_ops_sim_st_ui_components_configuration_render_configuration",
+      "community": 4,
+      "community_name": "app.py",
+      "norm_label": "render_configuration()"
+    },
+    {
+      "label": "render_metrics()",
+      "file_type": "code",
+      "source_file": "src/dev_ops_sim/st_ui/components/metrics.py",
+      "source_location": "L4",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_dev_ops_sim_st_ui_components_metrics_render_metrics",
+      "community": 4,
+      "community_name": "app.py",
+      "norm_label": "render_metrics()"
+    },
+    {
+      "label": "render_topology()",
+      "file_type": "code",
+      "source_file": "src/dev_ops_sim/st_ui/components/topology.py",
+      "source_location": "L11",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_dev_ops_sim_st_ui_components_topology_render_topology",
+      "community": 4,
+      "community_name": "app.py",
+      "norm_label": "render_topology()"
+    },
+    {
+      "label": "load_styles()",
+      "file_type": "code",
+      "source_file": "src/dev_ops_sim/st_ui/styles.py",
+      "source_location": "L105",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_dev_ops_sim_st_ui_styles_load_styles",
+      "community": 4,
+      "community_name": "app.py",
+      "norm_label": "load_styles()"
+    },
+    {
+      "label": "SimulationCanvas()",
+      "file_type": "code",
+      "source_file": "src/solara_ui/components/canvas.py",
+      "source_location": "L4",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_solara_ui_components_canvas_simulationcanvas",
+      "community": 5,
+      "community_name": "Page",
+      "norm_label": "simulationcanvas()"
+    },
+    {
+      "label": "ConfigurationPanel()",
+      "file_type": "code",
+      "source_file": "src/solara_ui/components/configuration_panel.py",
+      "source_location": "L4",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_solara_ui_components_configuration_panel_configurationpanel",
+      "community": 5,
+      "community_name": "Page",
+      "norm_label": "configurationpanel()"
+    },
+    {
+      "label": "Header()",
+      "file_type": "code",
+      "source_file": "src/solara_ui/components/header.py",
+      "source_location": "L4",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_solara_ui_components_header_header",
+      "community": 5,
+      "community_name": "Page",
+      "norm_label": "header()"
+    },
+    {
+      "label": "MetricsPanel()",
+      "file_type": "code",
+      "source_file": "src/solara_ui/components/metrics_panel.py",
+      "source_location": "L4",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_solara_ui_components_metrics_panel_metricspanel",
+      "community": 5,
+      "community_name": "Page",
+      "norm_label": "metricspanel()"
+    },
+    {
+      "label": "NodePalette()",
+      "file_type": "code",
+      "source_file": "src/solara_ui/components/node_palette.py",
+      "source_location": "L4",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_solara_ui_components_node_palette_nodepalette",
+      "community": 5,
+      "community_name": "Page",
+      "norm_label": "nodepalette()"
+    },
+    {
+      "label": "Page()",
+      "file_type": "code",
+      "source_file": "src/solara_ui/sol.py",
+      "source_location": "L9",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_solara_ui_sol_page",
+      "community": 5,
+      "community_name": "Page",
+      "norm_label": "page()"
     },
     {
       "label": "main()",
@@ -415,21 +475,22 @@
       "source_location": "L1",
       "_callable": true,
       "_origin": "ast",
-      "community": 6,
-      "norm_label": "main()",
       "id": "src_dev_ops_sim_init_main",
-      "community_name": "__init__.py"
+      "community": 6,
+      "community_name": "__init__.py",
+      "norm_label": "main()"
     },
     {
-      "label": "request.py",
+      "label": ".run()",
       "file_type": "code",
-      "source_file": "src/dev_ops_sim/core/request.py",
-      "source_location": "L1",
+      "source_file": "src/dev_ops_sim/nodes/traffic_generator.py",
+      "source_location": "L52",
+      "_callable": true,
       "_origin": "ast",
-      "community": 0,
-      "norm_label": "request.py",
-      "id": "src_dev_ops_sim_core_request",
-      "community_name": "Request"
+      "id": "src_dev_ops_sim_nodes_traffic_generator_trafficgenerator_run",
+      "community": 9,
+      "community_name": "Request",
+      "norm_label": ".run()"
     },
     {
       "label": "database_node.py",
@@ -437,10 +498,10 @@
       "source_file": "src/dev_ops_sim/nodes/database_node.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 0,
-      "norm_label": "database_node.py",
       "id": "src_dev_ops_sim_nodes_database_node",
-      "community_name": "Request"
+      "community": 0,
+      "community_name": "Database",
+      "norm_label": "database_node.py"
     },
     {
       "label": "Environment",
@@ -448,10 +509,10 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 0,
-      "norm_label": "environment",
       "id": "src_dev_ops_sim_nodes_database_node_py_environment",
-      "community_name": "Request"
+      "community": 0,
+      "community_name": "Database",
+      "norm_label": "environment"
     },
     {
       "label": "Store",
@@ -459,10 +520,10 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 0,
-      "norm_label": "store",
       "id": "src_dev_ops_sim_nodes_database_node_py_store",
-      "community_name": "Request"
+      "community": 0,
+      "community_name": "Database",
+      "norm_label": "store"
     },
     {
       "label": "Configuration for the Database.",
@@ -470,32 +531,10 @@
       "source_file": "src/dev_ops_sim/nodes/database_node.py",
       "source_location": "L8",
       "_origin": "ast",
-      "community": 0,
-      "norm_label": "configuration for the database.",
       "id": "src_dev_ops_sim_nodes_database_node_rationale_8",
-      "community_name": "Request"
-    },
-    {
-      "label": "main.py",
-      "file_type": "code",
-      "source_file": "src/dev_ops_sim/main.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 1,
-      "norm_label": "main.py",
-      "id": "src_dev_ops_sim_main",
-      "community_name": "TrafficGenerator"
-    },
-    {
-      "label": "traffic_generator.py",
-      "file_type": "code",
-      "source_file": "src/dev_ops_sim/nodes/traffic_generator.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 1,
-      "norm_label": "traffic_generator.py",
-      "id": "src_dev_ops_sim_nodes_traffic_generator",
-      "community_name": "TrafficGenerator"
+      "community": 0,
+      "community_name": "Database",
+      "norm_label": "configuration for the database."
     },
     {
       "label": "Environment",
@@ -503,10 +542,10 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 1,
-      "norm_label": "environment",
       "id": "src_dev_ops_sim_nodes_traffic_generator_py_environment",
-      "community_name": "TrafficGenerator"
+      "community": 1,
+      "community_name": "TrafficGeneratorConfig",
+      "norm_label": "environment"
     },
     {
       "label": "Store",
@@ -514,10 +553,10 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 1,
-      "norm_label": "store",
       "id": "src_dev_ops_sim_nodes_traffic_generator_py_store",
-      "community_name": "TrafficGenerator"
+      "community": 1,
+      "community_name": "TrafficGeneratorConfig",
+      "norm_label": "store"
     },
     {
       "label": "Configuration for the TrafficGenerator.",
@@ -525,10 +564,54 @@
       "source_file": "src/dev_ops_sim/nodes/traffic_generator.py",
       "source_location": "L7",
       "_origin": "ast",
-      "community": 1,
-      "norm_label": "configuration for the trafficgenerator.",
       "id": "src_dev_ops_sim_nodes_traffic_generator_rationale_7",
-      "community_name": "TrafficGenerator"
+      "community": 1,
+      "community_name": "TrafficGeneratorConfig",
+      "norm_label": "configuration for the trafficgenerator."
+    },
+    {
+      "label": "main.py",
+      "file_type": "code",
+      "source_file": "src/dev_ops_sim/main.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_dev_ops_sim_main",
+      "community": 10,
+      "community_name": "ApplicationServer",
+      "norm_label": "main.py"
+    },
+    {
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "readme",
+      "community": 11,
+      "community_name": "README.md",
+      "norm_label": "readme.md"
+    },
+    {
+      "label": "DevOps Sim",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "readme_devops_sim",
+      "community": 11,
+      "community_name": "README.md",
+      "norm_label": "devops sim"
+    },
+    {
+      "label": "INSTALLATION.md",
+      "file_type": "document",
+      "source_file": "INSTALLATION.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "installation",
+      "community": 12,
+      "community_name": "INSTALLATION.md",
+      "norm_label": "installation.md"
     },
     {
       "label": "application_server.py",
@@ -536,10 +619,10 @@
       "source_file": "src/dev_ops_sim/nodes/application_server.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 2,
-      "norm_label": "application_server.py",
       "id": "src_dev_ops_sim_nodes_application_server",
-      "community_name": "ApplicationServer"
+      "community": 2,
+      "community_name": "ApplicationServerConfig",
+      "norm_label": "application_server.py"
     },
     {
       "label": "Environment",
@@ -547,10 +630,10 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 2,
-      "norm_label": "environment",
       "id": "src_dev_ops_sim_nodes_application_server_py_environment",
-      "community_name": "ApplicationServer"
+      "community": 2,
+      "community_name": "ApplicationServerConfig",
+      "norm_label": "environment"
     },
     {
       "label": "Store",
@@ -558,10 +641,10 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 2,
-      "norm_label": "store",
       "id": "src_dev_ops_sim_nodes_application_server_py_store",
-      "community_name": "ApplicationServer"
+      "community": 2,
+      "community_name": "ApplicationServerConfig",
+      "norm_label": "store"
     },
     {
       "label": "Configuration for the ApplicationServer.",
@@ -569,10 +652,10 @@
       "source_file": "src/dev_ops_sim/nodes/application_server.py",
       "source_location": "L8",
       "_origin": "ast",
-      "community": 2,
-      "norm_label": "configuration for the applicationserver.",
       "id": "src_dev_ops_sim_nodes_application_server_rationale_8",
-      "community_name": "ApplicationServer"
+      "community": 2,
+      "community_name": "ApplicationServerConfig",
+      "norm_label": "configuration for the applicationserver."
     },
     {
       "label": "load_balancer.py",
@@ -580,10 +663,10 @@
       "source_file": "src/dev_ops_sim/nodes/load_balancer.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 3,
-      "norm_label": "load_balancer.py",
       "id": "src_dev_ops_sim_nodes_load_balancer",
-      "community_name": "LoadBalancer"
+      "community": 3,
+      "community_name": "run_simulation",
+      "norm_label": "load_balancer.py"
     },
     {
       "label": "Environment",
@@ -591,10 +674,10 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 3,
-      "norm_label": "environment",
       "id": "src_dev_ops_sim_nodes_load_balancer_py_environment",
-      "community_name": "LoadBalancer"
+      "community": 3,
+      "community_name": "run_simulation",
+      "norm_label": "environment"
     },
     {
       "label": "Store",
@@ -602,65 +685,10 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 3,
-      "norm_label": "store",
       "id": "src_dev_ops_sim_nodes_load_balancer_py_store",
-      "community_name": "LoadBalancer"
-    },
-    {
-      "label": "app.py",
-      "file_type": "code",
-      "source_file": "src/dev_ops_sim/st_ui/app.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "app.py",
-      "id": "src_dev_ops_sim_st_ui_app",
-      "community_name": "app.py"
-    },
-    {
-      "label": "configuration.py",
-      "file_type": "code",
-      "source_file": "src/dev_ops_sim/st_ui/components/configuration.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "configuration.py",
-      "id": "src_dev_ops_sim_st_ui_components_configuration",
-      "community_name": "app.py"
-    },
-    {
-      "label": "metrics.py",
-      "file_type": "code",
-      "source_file": "src/dev_ops_sim/st_ui/components/metrics.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "metrics.py",
-      "id": "src_dev_ops_sim_st_ui_components_metrics",
-      "community_name": "app.py"
-    },
-    {
-      "label": "topology.py",
-      "file_type": "code",
-      "source_file": "src/dev_ops_sim/st_ui/components/topology.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "topology.py",
-      "id": "src_dev_ops_sim_st_ui_components_topology",
-      "community_name": "app.py"
-    },
-    {
-      "label": "styles.py",
-      "file_type": "code",
-      "source_file": "src/dev_ops_sim/st_ui/styles.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "styles.py",
-      "id": "src_dev_ops_sim_st_ui_styles",
-      "community_name": "app.py"
+      "community": 3,
+      "community_name": "run_simulation",
+      "norm_label": "store"
     },
     {
       "label": "simulation.py",
@@ -668,10 +696,10 @@
       "source_file": "src/dev_ops_sim/st_ui/simulation.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 5,
-      "norm_label": "simulation.py",
       "id": "src_dev_ops_sim_st_ui_simulation",
-      "community_name": "run_simulation"
+      "community": 3,
+      "community_name": "run_simulation",
+      "norm_label": "simulation.py"
     },
     {
       "label": "Configuration for the LoadBalancer.",
@@ -679,10 +707,197 @@
       "source_file": "src/dev_ops_sim/nodes/load_balancer.py",
       "source_location": "L19",
       "_origin": "ast",
-      "community": 5,
-      "norm_label": "configuration for the loadbalancer.",
       "id": "src_dev_ops_sim_nodes_load_balancer_rationale_19",
-      "community_name": "run_simulation"
+      "community": 3,
+      "community_name": "run_simulation",
+      "norm_label": "configuration for the loadbalancer."
+    },
+    {
+      "label": "app.py",
+      "file_type": "code",
+      "source_file": "src/dev_ops_sim/st_ui/app.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_dev_ops_sim_st_ui_app",
+      "community": 4,
+      "community_name": "app.py",
+      "norm_label": "app.py"
+    },
+    {
+      "label": "configuration.py",
+      "file_type": "code",
+      "source_file": "src/dev_ops_sim/st_ui/components/configuration.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_dev_ops_sim_st_ui_components_configuration",
+      "community": 4,
+      "community_name": "app.py",
+      "norm_label": "configuration.py"
+    },
+    {
+      "label": "metrics.py",
+      "file_type": "code",
+      "source_file": "src/dev_ops_sim/st_ui/components/metrics.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_dev_ops_sim_st_ui_components_metrics",
+      "community": 4,
+      "community_name": "app.py",
+      "norm_label": "metrics.py"
+    },
+    {
+      "label": "topology.py",
+      "file_type": "code",
+      "source_file": "src/dev_ops_sim/st_ui/components/topology.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_dev_ops_sim_st_ui_components_topology",
+      "community": 4,
+      "community_name": "app.py",
+      "norm_label": "topology.py"
+    },
+    {
+      "label": "styles.py",
+      "file_type": "code",
+      "source_file": "src/dev_ops_sim/st_ui/styles.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_dev_ops_sim_st_ui_styles",
+      "community": 4,
+      "community_name": "app.py",
+      "norm_label": "styles.py"
+    },
+    {
+      "label": "canvas.py",
+      "file_type": "code",
+      "source_file": "src/solara_ui/components/canvas.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_solara_ui_components_canvas",
+      "community": 5,
+      "community_name": "Page",
+      "norm_label": "canvas.py"
+    },
+    {
+      "label": "component",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "src_solara_ui_components_canvas_py_component",
+      "community": 5,
+      "community_name": "Page",
+      "norm_label": "component"
+    },
+    {
+      "label": "configuration_panel.py",
+      "file_type": "code",
+      "source_file": "src/solara_ui/components/configuration_panel.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_solara_ui_components_configuration_panel",
+      "community": 5,
+      "community_name": "Page",
+      "norm_label": "configuration_panel.py"
+    },
+    {
+      "label": "component",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "src_solara_ui_components_configuration_panel_py_component",
+      "community": 5,
+      "community_name": "Page",
+      "norm_label": "component"
+    },
+    {
+      "label": "header.py",
+      "file_type": "code",
+      "source_file": "src/solara_ui/components/header.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_solara_ui_components_header",
+      "community": 5,
+      "community_name": "Page",
+      "norm_label": "header.py"
+    },
+    {
+      "label": "component",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "src_solara_ui_components_header_py_component",
+      "community": 5,
+      "community_name": "Page",
+      "norm_label": "component"
+    },
+    {
+      "label": "metrics_panel.py",
+      "file_type": "code",
+      "source_file": "src/solara_ui/components/metrics_panel.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_solara_ui_components_metrics_panel",
+      "community": 5,
+      "community_name": "Page",
+      "norm_label": "metrics_panel.py"
+    },
+    {
+      "label": "component",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "src_solara_ui_components_metrics_panel_py_component",
+      "community": 5,
+      "community_name": "Page",
+      "norm_label": "component"
+    },
+    {
+      "label": "node_palette.py",
+      "file_type": "code",
+      "source_file": "src/solara_ui/components/node_palette.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_solara_ui_components_node_palette",
+      "community": 5,
+      "community_name": "Page",
+      "norm_label": "node_palette.py"
+    },
+    {
+      "label": "component",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "src_solara_ui_components_node_palette_py_component",
+      "community": 5,
+      "community_name": "Page",
+      "norm_label": "component"
+    },
+    {
+      "label": "sol.py",
+      "file_type": "code",
+      "source_file": "src/solara_ui/sol.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_solara_ui_sol",
+      "community": 5,
+      "community_name": "Page",
+      "norm_label": "sol.py"
+    },
+    {
+      "label": "component",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "src_solara_ui_sol_py_component",
+      "community": 5,
+      "community_name": "Page",
+      "norm_label": "component"
     },
     {
       "label": "__init__.py",
@@ -690,10 +905,10 @@
       "source_file": "src/dev_ops_sim/__init__.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 6,
-      "norm_label": "__init__.py",
       "id": "src_dev_ops_sim_init",
-      "community_name": "__init__.py"
+      "community": 6,
+      "community_name": "__init__.py",
+      "norm_label": "__init__.py"
     },
     {
       "label": "dev-ops-sim",
@@ -704,10 +919,10 @@
       "source_location": "L1",
       "version": "0.1.0",
       "_origin": "ast",
-      "community": 7,
-      "norm_label": "dev-ops-sim",
       "id": "pkg_dev_ops_sim",
-      "community_name": "dev-ops-sim"
+      "community": 7,
+      "community_name": "dev-ops-sim",
+      "norm_label": "dev-ops-sim"
     },
     {
       "label": "icons.py",
@@ -715,10 +930,32 @@
       "source_file": "src/dev_ops_sim/st_ui/icons.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 8,
-      "norm_label": "icons.py",
       "id": "src_dev_ops_sim_st_ui_icons",
-      "community_name": "icons.py"
+      "community": 8,
+      "community_name": "icons.py",
+      "norm_label": "icons.py"
+    },
+    {
+      "label": "request.py",
+      "file_type": "code",
+      "source_file": "src/dev_ops_sim/core/request.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_dev_ops_sim_core_request",
+      "community": 9,
+      "community_name": "Request",
+      "norm_label": "request.py"
+    },
+    {
+      "label": "traffic_generator.py",
+      "file_type": "code",
+      "source_file": "src/dev_ops_sim/nodes/traffic_generator.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_dev_ops_sim_nodes_traffic_generator",
+      "community": 9,
+      "community_name": "Request",
+      "norm_label": "traffic_generator.py"
     }
   ],
   "links": [
@@ -730,9 +967,9 @@
       "source_location": "L22",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_main_main",
-      "target": "src_dev_ops_sim_nodes_traffic_generator_trafficgenerator"
+      "target": "src_dev_ops_sim_nodes_traffic_generator_trafficgenerator",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -742,9 +979,9 @@
       "source_location": "L28",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_main_main",
-      "target": "src_dev_ops_sim_nodes_application_server_applicationserver"
+      "target": "src_dev_ops_sim_nodes_application_server_applicationserver",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -754,9 +991,9 @@
       "source_location": "L58",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_nodes_application_server_applicationserver_run",
-      "target": "src_dev_ops_sim_nodes_application_server_applicationserver_process_request"
+      "target": "src_dev_ops_sim_nodes_application_server_applicationserver_process_request",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -766,9 +1003,9 @@
       "source_location": "L54",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_nodes_database_node_database_run",
-      "target": "src_dev_ops_sim_nodes_database_node_database_process_request"
+      "target": "src_dev_ops_sim_nodes_database_node_database_process_request",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -778,9 +1015,9 @@
       "source_location": "L71",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_nodes_load_balancer_loadbalancer_run",
-      "target": "src_dev_ops_sim_nodes_load_balancer_loadbalancer_select_backend"
+      "target": "src_dev_ops_sim_nodes_load_balancer_loadbalancer_select_backend",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -790,9 +1027,9 @@
       "source_location": "L38",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_st_ui_simulation_run_simulation",
-      "target": "src_dev_ops_sim_nodes_traffic_generator_trafficgeneratorconfig"
+      "target": "src_dev_ops_sim_nodes_traffic_generator_trafficgeneratorconfig",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -802,9 +1039,9 @@
       "source_location": "L44",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_st_ui_simulation_run_simulation",
-      "target": "src_dev_ops_sim_nodes_load_balancer_loadbalancerconfig"
+      "target": "src_dev_ops_sim_nodes_load_balancer_loadbalancerconfig",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -814,9 +1051,9 @@
       "source_location": "L48",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_st_ui_simulation_run_simulation",
-      "target": "src_dev_ops_sim_nodes_application_server_applicationserverconfig"
+      "target": "src_dev_ops_sim_nodes_application_server_applicationserverconfig",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -826,9 +1063,9 @@
       "source_location": "L53",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_st_ui_simulation_run_simulation",
-      "target": "src_dev_ops_sim_nodes_database_node_databaseconfig"
+      "target": "src_dev_ops_sim_nodes_database_node_databaseconfig",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -838,9 +1075,9 @@
       "source_location": "L58",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_st_ui_simulation_run_simulation",
-      "target": "src_dev_ops_sim_nodes_traffic_generator_trafficgenerator"
+      "target": "src_dev_ops_sim_nodes_traffic_generator_trafficgenerator",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -850,9 +1087,9 @@
       "source_location": "L64",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_st_ui_simulation_run_simulation",
-      "target": "src_dev_ops_sim_nodes_load_balancer_loadbalancer"
+      "target": "src_dev_ops_sim_nodes_load_balancer_loadbalancer",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -862,9 +1099,9 @@
       "source_location": "L71",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_st_ui_simulation_run_simulation",
-      "target": "src_dev_ops_sim_nodes_application_server_applicationserver"
+      "target": "src_dev_ops_sim_nodes_application_server_applicationserver",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -874,9 +1111,69 @@
       "source_location": "L78",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_st_ui_simulation_run_simulation",
-      "target": "src_dev_ops_sim_nodes_database_node_database"
+      "target": "src_dev_ops_sim_nodes_database_node_database",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/solara_ui/sol.py",
+      "source_location": "L21",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_solara_ui_sol_page",
+      "target": "src_solara_ui_components_header_header"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/solara_ui/sol.py",
+      "source_location": "L41",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_solara_ui_sol_page",
+      "target": "src_solara_ui_components_node_palette_nodepalette"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/solara_ui/sol.py",
+      "source_location": "L50",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_solara_ui_sol_page",
+      "target": "src_solara_ui_components_canvas_simulationcanvas"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/solara_ui/sol.py",
+      "source_location": "L60",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_solara_ui_sol_page",
+      "target": "src_solara_ui_components_configuration_panel_configurationpanel"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/solara_ui/sol.py",
+      "source_location": "L69",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_solara_ui_sol_page",
+      "target": "src_solara_ui_components_metrics_panel_metricspanel"
     },
     {
       "relation": "references",
@@ -886,9 +1183,9 @@
       "weight": 1.0,
       "context": "decorator",
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_nodes_load_balancer_loadbalancer_select_random",
-      "target": "src_dev_ops_sim_nodes_load_balancer_load_balancing_algorithm"
+      "target": "src_dev_ops_sim_nodes_load_balancer_load_balancing_algorithm",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
@@ -898,9 +1195,81 @@
       "weight": 1.0,
       "context": "decorator",
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_nodes_load_balancer_loadbalancer_select_round_robin",
-      "target": "src_dev_ops_sim_nodes_load_balancer_load_balancing_algorithm"
+      "target": "src_dev_ops_sim_nodes_load_balancer_load_balancing_algorithm",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/solara_ui/components/canvas.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "context": "decorator",
+      "_origin": "ast",
+      "source": "src_solara_ui_components_canvas_simulationcanvas",
+      "target": "src_solara_ui_components_canvas_py_component",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/solara_ui/components/configuration_panel.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "context": "decorator",
+      "_origin": "ast",
+      "source": "src_solara_ui_components_configuration_panel_configurationpanel",
+      "target": "src_solara_ui_components_configuration_panel_py_component",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/solara_ui/components/header.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "context": "decorator",
+      "_origin": "ast",
+      "source": "src_solara_ui_components_header_header",
+      "target": "src_solara_ui_components_header_py_component",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/solara_ui/components/metrics_panel.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "context": "decorator",
+      "_origin": "ast",
+      "source": "src_solara_ui_components_metrics_panel_metricspanel",
+      "target": "src_solara_ui_components_metrics_panel_py_component",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/solara_ui/components/node_palette.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "context": "decorator",
+      "_origin": "ast",
+      "source": "src_solara_ui_components_node_palette_nodepalette",
+      "target": "src_solara_ui_components_node_palette_py_component",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/solara_ui/sol.py",
+      "source_location": "L8",
+      "weight": 1.0,
+      "context": "decorator",
+      "_origin": "ast",
+      "source": "src_solara_ui_sol_page",
+      "target": "src_solara_ui_sol_py_component",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
@@ -910,9 +1279,9 @@
       "source_location": "L32",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_nodes_load_balancer_loadbalancer_init",
-      "target": "src_dev_ops_sim_nodes_load_balancer_py_store"
+      "target": "src_dev_ops_sim_nodes_load_balancer_py_store",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -922,9 +1291,9 @@
       "source_location": "L2",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_main",
-      "target": "src_dev_ops_sim_nodes_traffic_generator_trafficgenerator"
+      "target": "src_dev_ops_sim_nodes_traffic_generator_trafficgenerator",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -934,9 +1303,9 @@
       "source_location": "L2",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_main",
-      "target": "src_dev_ops_sim_nodes_traffic_generator_trafficgeneratorconfig"
+      "target": "src_dev_ops_sim_nodes_traffic_generator_trafficgeneratorconfig",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -946,9 +1315,9 @@
       "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_main",
-      "target": "src_dev_ops_sim_nodes_application_server_applicationserver"
+      "target": "src_dev_ops_sim_nodes_application_server_applicationserver",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -958,9 +1327,9 @@
       "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_main",
-      "target": "src_dev_ops_sim_nodes_application_server_applicationserverconfig"
+      "target": "src_dev_ops_sim_nodes_application_server_applicationserverconfig",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -970,9 +1339,9 @@
       "source_location": "L2",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_nodes_application_server",
-      "target": "src_dev_ops_sim_core_request_request"
+      "target": "src_dev_ops_sim_core_request_request",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -982,9 +1351,9 @@
       "source_location": "L2",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_nodes_database_node",
-      "target": "src_dev_ops_sim_core_request_request"
+      "target": "src_dev_ops_sim_core_request_request",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -994,9 +1363,9 @@
       "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_nodes_traffic_generator",
-      "target": "src_dev_ops_sim_core_request_request"
+      "target": "src_dev_ops_sim_core_request_request",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -1006,9 +1375,9 @@
       "source_location": "L12",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_st_ui_app",
-      "target": "src_dev_ops_sim_st_ui_components_metrics_render_metrics"
+      "target": "src_dev_ops_sim_st_ui_components_metrics_render_metrics",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -1018,9 +1387,9 @@
       "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_st_ui_app",
-      "target": "src_dev_ops_sim_st_ui_styles_load_styles"
+      "target": "src_dev_ops_sim_st_ui_styles_load_styles",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -1030,9 +1399,9 @@
       "source_location": "L4",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_st_ui_app",
-      "target": "src_dev_ops_sim_st_ui_simulation_run_simulation"
+      "target": "src_dev_ops_sim_st_ui_simulation_run_simulation",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -1042,9 +1411,9 @@
       "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_st_ui_app",
-      "target": "src_dev_ops_sim_st_ui_components_configuration_render_configuration"
+      "target": "src_dev_ops_sim_st_ui_components_configuration_render_configuration",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -1054,9 +1423,9 @@
       "source_location": "L9",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_st_ui_app",
-      "target": "src_dev_ops_sim_st_ui_components_topology_render_topology"
+      "target": "src_dev_ops_sim_st_ui_components_topology_render_topology",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -1066,9 +1435,9 @@
       "source_location": "L11",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_st_ui_simulation",
-      "target": "src_dev_ops_sim_nodes_application_server_applicationserver"
+      "target": "src_dev_ops_sim_nodes_application_server_applicationserver",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -1078,9 +1447,9 @@
       "source_location": "L11",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_st_ui_simulation",
-      "target": "src_dev_ops_sim_nodes_application_server_applicationserverconfig"
+      "target": "src_dev_ops_sim_nodes_application_server_applicationserverconfig",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -1090,9 +1459,9 @@
       "source_location": "L15",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_st_ui_simulation",
-      "target": "src_dev_ops_sim_nodes_database_node_database"
+      "target": "src_dev_ops_sim_nodes_database_node_database",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -1102,9 +1471,9 @@
       "source_location": "L15",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_st_ui_simulation",
-      "target": "src_dev_ops_sim_nodes_database_node_databaseconfig"
+      "target": "src_dev_ops_sim_nodes_database_node_databaseconfig",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -1114,9 +1483,9 @@
       "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_st_ui_simulation",
-      "target": "src_dev_ops_sim_nodes_traffic_generator_trafficgenerator"
+      "target": "src_dev_ops_sim_nodes_traffic_generator_trafficgenerator",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -1126,9 +1495,9 @@
       "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_st_ui_simulation",
-      "target": "src_dev_ops_sim_nodes_traffic_generator_trafficgeneratorconfig"
+      "target": "src_dev_ops_sim_nodes_traffic_generator_trafficgeneratorconfig",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -1138,9 +1507,9 @@
       "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_st_ui_simulation",
-      "target": "src_dev_ops_sim_nodes_load_balancer_loadbalancer"
+      "target": "src_dev_ops_sim_nodes_load_balancer_loadbalancer",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -1150,9 +1519,69 @@
       "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_st_ui_simulation",
-      "target": "src_dev_ops_sim_nodes_load_balancer_loadbalancerconfig"
+      "target": "src_dev_ops_sim_nodes_load_balancer_loadbalancerconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/solara_ui/sol.py",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_solara_ui_sol",
+      "target": "src_solara_ui_components_configuration_panel_configurationpanel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/solara_ui/sol.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_solara_ui_sol",
+      "target": "src_solara_ui_components_canvas_simulationcanvas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/solara_ui/sol.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_solara_ui_sol",
+      "target": "src_solara_ui_components_metrics_panel_metricspanel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/solara_ui/sol.py",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_solara_ui_sol",
+      "target": "src_solara_ui_components_node_palette_nodepalette",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/solara_ui/sol.py",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_solara_ui_sol",
+      "target": "src_solara_ui_components_header_header",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
@@ -1162,9 +1591,9 @@
       "source_location": "L31",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_nodes_application_server_applicationserver_init",
-      "target": "src_dev_ops_sim_nodes_application_server_applicationserverconfig"
+      "target": "src_dev_ops_sim_nodes_application_server_applicationserverconfig",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
@@ -1174,9 +1603,9 @@
       "source_location": "L31",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_nodes_application_server_applicationserver_init",
-      "target": "src_dev_ops_sim_nodes_application_server_py_environment"
+      "target": "src_dev_ops_sim_nodes_application_server_py_environment",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
@@ -1186,9 +1615,9 @@
       "source_location": "L31",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_nodes_application_server_applicationserver_init",
-      "target": "src_dev_ops_sim_nodes_application_server_py_store"
+      "target": "src_dev_ops_sim_nodes_application_server_py_store",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
@@ -1198,9 +1627,9 @@
       "source_location": "L61",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_nodes_application_server_applicationserver_process_request",
-      "target": "src_dev_ops_sim_core_request_request"
+      "target": "src_dev_ops_sim_core_request_request",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
@@ -1210,9 +1639,9 @@
       "source_location": "L26",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_nodes_database_node_database_init",
-      "target": "src_dev_ops_sim_nodes_database_node_databaseconfig"
+      "target": "src_dev_ops_sim_nodes_database_node_databaseconfig",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
@@ -1222,9 +1651,9 @@
       "source_location": "L26",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_nodes_database_node_database_init",
-      "target": "src_dev_ops_sim_nodes_database_node_py_environment"
+      "target": "src_dev_ops_sim_nodes_database_node_py_environment",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
@@ -1234,9 +1663,9 @@
       "source_location": "L26",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_nodes_database_node_database_init",
-      "target": "src_dev_ops_sim_nodes_database_node_py_store"
+      "target": "src_dev_ops_sim_nodes_database_node_py_store",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
@@ -1246,9 +1675,9 @@
       "source_location": "L57",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_nodes_database_node_database_process_request",
-      "target": "src_dev_ops_sim_core_request_request"
+      "target": "src_dev_ops_sim_core_request_request",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
@@ -1258,9 +1687,9 @@
       "source_location": "L32",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_nodes_load_balancer_loadbalancer_init",
-      "target": "src_dev_ops_sim_nodes_load_balancer_loadbalancerconfig"
+      "target": "src_dev_ops_sim_nodes_load_balancer_loadbalancerconfig",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
@@ -1270,9 +1699,9 @@
       "source_location": "L32",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_nodes_load_balancer_loadbalancer_init",
-      "target": "src_dev_ops_sim_nodes_load_balancer_py_environment"
+      "target": "src_dev_ops_sim_nodes_load_balancer_py_environment",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
@@ -1282,9 +1711,9 @@
       "source_location": "L39",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_nodes_traffic_generator_trafficgenerator_init",
-      "target": "src_dev_ops_sim_nodes_traffic_generator_py_environment"
+      "target": "src_dev_ops_sim_nodes_traffic_generator_py_environment",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
@@ -1294,9 +1723,9 @@
       "source_location": "L39",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_nodes_traffic_generator_trafficgenerator_init",
-      "target": "src_dev_ops_sim_nodes_traffic_generator_py_store"
+      "target": "src_dev_ops_sim_nodes_traffic_generator_py_store",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
@@ -1306,9 +1735,20 @@
       "source_location": "L39",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_nodes_traffic_generator_trafficgenerator_init",
-      "target": "src_dev_ops_sim_nodes_traffic_generator_trafficgeneratorconfig"
+      "target": "src_dev_ops_sim_nodes_traffic_generator_trafficgeneratorconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme",
+      "target": "readme_devops_sim",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1317,9 +1757,9 @@
       "source_location": "L4",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_core_request",
-      "target": "src_dev_ops_sim_core_request_request"
+      "target": "src_dev_ops_sim_core_request_request",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1328,9 +1768,9 @@
       "source_location": "L1",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_init",
-      "target": "src_dev_ops_sim_init_main"
+      "target": "src_dev_ops_sim_init_main",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1339,9 +1779,9 @@
       "source_location": "L18",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_main",
-      "target": "src_dev_ops_sim_main_main"
+      "target": "src_dev_ops_sim_main_main",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1350,9 +1790,9 @@
       "source_location": "L30",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_nodes_application_server",
-      "target": "src_dev_ops_sim_nodes_application_server_applicationserver"
+      "target": "src_dev_ops_sim_nodes_application_server_applicationserver",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1361,9 +1801,9 @@
       "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_nodes_application_server",
-      "target": "src_dev_ops_sim_nodes_application_server_applicationserverconfig"
+      "target": "src_dev_ops_sim_nodes_application_server_applicationserverconfig",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1372,9 +1812,9 @@
       "source_location": "L25",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_nodes_database_node",
-      "target": "src_dev_ops_sim_nodes_database_node_database"
+      "target": "src_dev_ops_sim_nodes_database_node_database",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1383,9 +1823,9 @@
       "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_nodes_database_node",
-      "target": "src_dev_ops_sim_nodes_database_node_databaseconfig"
+      "target": "src_dev_ops_sim_nodes_database_node_databaseconfig",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1394,9 +1834,9 @@
       "source_location": "L18",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_nodes_load_balancer",
-      "target": "src_dev_ops_sim_nodes_load_balancer_loadbalancerconfig"
+      "target": "src_dev_ops_sim_nodes_load_balancer_loadbalancerconfig",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1405,9 +1845,9 @@
       "source_location": "L31",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_nodes_load_balancer",
-      "target": "src_dev_ops_sim_nodes_load_balancer_loadbalancer"
+      "target": "src_dev_ops_sim_nodes_load_balancer_loadbalancer",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1416,9 +1856,9 @@
       "source_location": "L9",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_nodes_load_balancer",
-      "target": "src_dev_ops_sim_nodes_load_balancer_load_balancing_algorithm"
+      "target": "src_dev_ops_sim_nodes_load_balancer_load_balancing_algorithm",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1427,9 +1867,9 @@
       "source_location": "L38",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_nodes_traffic_generator",
-      "target": "src_dev_ops_sim_nodes_traffic_generator_trafficgenerator"
+      "target": "src_dev_ops_sim_nodes_traffic_generator_trafficgenerator",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1438,9 +1878,9 @@
       "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_nodes_traffic_generator",
-      "target": "src_dev_ops_sim_nodes_traffic_generator_trafficgeneratorconfig"
+      "target": "src_dev_ops_sim_nodes_traffic_generator_trafficgeneratorconfig",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1449,9 +1889,9 @@
       "source_location": "L4",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_st_ui_components_configuration",
-      "target": "src_dev_ops_sim_st_ui_components_configuration_render_configuration"
+      "target": "src_dev_ops_sim_st_ui_components_configuration_render_configuration",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1460,9 +1900,9 @@
       "source_location": "L4",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_st_ui_components_metrics",
-      "target": "src_dev_ops_sim_st_ui_components_metrics_render_metrics"
+      "target": "src_dev_ops_sim_st_ui_components_metrics_render_metrics",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1471,9 +1911,9 @@
       "source_location": "L11",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_st_ui_components_topology",
-      "target": "src_dev_ops_sim_st_ui_components_topology_render_topology"
+      "target": "src_dev_ops_sim_st_ui_components_topology_render_topology",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1482,9 +1922,9 @@
       "source_location": "L21",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_st_ui_simulation",
-      "target": "src_dev_ops_sim_st_ui_simulation_run_simulation"
+      "target": "src_dev_ops_sim_st_ui_simulation_run_simulation",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1493,9 +1933,75 @@
       "source_location": "L105",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_st_ui_styles",
-      "target": "src_dev_ops_sim_st_ui_styles_load_styles"
+      "target": "src_dev_ops_sim_st_ui_styles_load_styles",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/solara_ui/components/canvas.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_solara_ui_components_canvas",
+      "target": "src_solara_ui_components_canvas_simulationcanvas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/solara_ui/components/configuration_panel.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_solara_ui_components_configuration_panel",
+      "target": "src_solara_ui_components_configuration_panel_configurationpanel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/solara_ui/components/header.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_solara_ui_components_header",
+      "target": "src_solara_ui_components_header_header",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/solara_ui/components/metrics_panel.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_solara_ui_components_metrics_panel",
+      "target": "src_solara_ui_components_metrics_panel_metricspanel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/solara_ui/components/node_palette.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_solara_ui_components_node_palette",
+      "target": "src_solara_ui_components_node_palette_nodepalette",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/solara_ui/sol.py",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_solara_ui_sol",
+      "target": "src_solara_ui_sol_page",
+      "confidence_score": 1.0
     },
     {
       "relation": "method",
@@ -1504,9 +2010,9 @@
       "source_location": "L31",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_nodes_application_server_applicationserver",
-      "target": "src_dev_ops_sim_nodes_application_server_applicationserver_init"
+      "target": "src_dev_ops_sim_nodes_application_server_applicationserver_init",
+      "confidence_score": 1.0
     },
     {
       "relation": "method",
@@ -1515,9 +2021,9 @@
       "source_location": "L51",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_nodes_application_server_applicationserver",
-      "target": "src_dev_ops_sim_nodes_application_server_applicationserver_run"
+      "target": "src_dev_ops_sim_nodes_application_server_applicationserver_run",
+      "confidence_score": 1.0
     },
     {
       "relation": "method",
@@ -1526,9 +2032,9 @@
       "source_location": "L61",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_nodes_application_server_applicationserver",
-      "target": "src_dev_ops_sim_nodes_application_server_applicationserver_process_request"
+      "target": "src_dev_ops_sim_nodes_application_server_applicationserver_process_request",
+      "confidence_score": 1.0
     },
     {
       "relation": "method",
@@ -1537,9 +2043,9 @@
       "source_location": "L21",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_nodes_application_server_applicationserverconfig",
-      "target": "src_dev_ops_sim_nodes_application_server_applicationserverconfig_post_init"
+      "target": "src_dev_ops_sim_nodes_application_server_applicationserverconfig_post_init",
+      "confidence_score": 1.0
     },
     {
       "relation": "method",
@@ -1548,9 +2054,9 @@
       "source_location": "L26",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_nodes_database_node_database",
-      "target": "src_dev_ops_sim_nodes_database_node_database_init"
+      "target": "src_dev_ops_sim_nodes_database_node_database_init",
+      "confidence_score": 1.0
     },
     {
       "relation": "method",
@@ -1559,9 +2065,9 @@
       "source_location": "L47",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_nodes_database_node_database",
-      "target": "src_dev_ops_sim_nodes_database_node_database_run"
+      "target": "src_dev_ops_sim_nodes_database_node_database_run",
+      "confidence_score": 1.0
     },
     {
       "relation": "method",
@@ -1570,9 +2076,9 @@
       "source_location": "L57",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_nodes_database_node_database",
-      "target": "src_dev_ops_sim_nodes_database_node_database_process_request"
+      "target": "src_dev_ops_sim_nodes_database_node_database_process_request",
+      "confidence_score": 1.0
     },
     {
       "relation": "method",
@@ -1581,9 +2087,9 @@
       "source_location": "L18",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_nodes_database_node_databaseconfig",
-      "target": "src_dev_ops_sim_nodes_database_node_databaseconfig_post_init"
+      "target": "src_dev_ops_sim_nodes_database_node_databaseconfig_post_init",
+      "confidence_score": 1.0
     },
     {
       "relation": "method",
@@ -1592,9 +2098,9 @@
       "source_location": "L101",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_nodes_load_balancer_loadbalancer",
-      "target": "src_dev_ops_sim_nodes_load_balancer_loadbalancer_select_random"
+      "target": "src_dev_ops_sim_nodes_load_balancer_loadbalancer_select_random",
+      "confidence_score": 1.0
     },
     {
       "relation": "method",
@@ -1603,9 +2109,9 @@
       "source_location": "L32",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_nodes_load_balancer_loadbalancer",
-      "target": "src_dev_ops_sim_nodes_load_balancer_loadbalancer_init"
+      "target": "src_dev_ops_sim_nodes_load_balancer_loadbalancer_init",
+      "confidence_score": 1.0
     },
     {
       "relation": "method",
@@ -1614,9 +2120,9 @@
       "source_location": "L65",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_nodes_load_balancer_loadbalancer",
-      "target": "src_dev_ops_sim_nodes_load_balancer_loadbalancer_run"
+      "target": "src_dev_ops_sim_nodes_load_balancer_loadbalancer_run",
+      "confidence_score": 1.0
     },
     {
       "relation": "method",
@@ -1625,9 +2131,9 @@
       "source_location": "L83",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_nodes_load_balancer_loadbalancer",
-      "target": "src_dev_ops_sim_nodes_load_balancer_loadbalancer_select_backend"
+      "target": "src_dev_ops_sim_nodes_load_balancer_loadbalancer_select_backend",
+      "confidence_score": 1.0
     },
     {
       "relation": "method",
@@ -1636,9 +2142,9 @@
       "source_location": "L91",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_nodes_load_balancer_loadbalancer",
-      "target": "src_dev_ops_sim_nodes_load_balancer_loadbalancer_select_round_robin"
+      "target": "src_dev_ops_sim_nodes_load_balancer_loadbalancer_select_round_robin",
+      "confidence_score": 1.0
     },
     {
       "relation": "method",
@@ -1647,9 +2153,9 @@
       "source_location": "L23",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_nodes_load_balancer_loadbalancerconfig",
-      "target": "src_dev_ops_sim_nodes_load_balancer_loadbalancerconfig_post_init"
+      "target": "src_dev_ops_sim_nodes_load_balancer_loadbalancerconfig_post_init",
+      "confidence_score": 1.0
     },
     {
       "relation": "method",
@@ -1658,9 +2164,9 @@
       "source_location": "L39",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_nodes_traffic_generator_trafficgenerator",
-      "target": "src_dev_ops_sim_nodes_traffic_generator_trafficgenerator_init"
+      "target": "src_dev_ops_sim_nodes_traffic_generator_trafficgenerator_init",
+      "confidence_score": 1.0
     },
     {
       "relation": "method",
@@ -1669,9 +2175,9 @@
       "source_location": "L52",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_nodes_traffic_generator_trafficgenerator",
-      "target": "src_dev_ops_sim_nodes_traffic_generator_trafficgenerator_run"
+      "target": "src_dev_ops_sim_nodes_traffic_generator_trafficgenerator_run",
+      "confidence_score": 1.0
     },
     {
       "relation": "method",
@@ -1680,9 +2186,9 @@
       "source_location": "L26",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_nodes_traffic_generator_trafficgeneratorconfig",
-      "target": "src_dev_ops_sim_nodes_traffic_generator_trafficgeneratorconfig_post_init"
+      "target": "src_dev_ops_sim_nodes_traffic_generator_trafficgeneratorconfig_post_init",
+      "confidence_score": 1.0
     },
     {
       "relation": "rationale_for",
@@ -1691,9 +2197,9 @@
       "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_nodes_application_server_rationale_8",
-      "target": "src_dev_ops_sim_nodes_application_server_applicationserverconfig"
+      "target": "src_dev_ops_sim_nodes_application_server_applicationserverconfig",
+      "confidence_score": 1.0
     },
     {
       "relation": "rationale_for",
@@ -1702,9 +2208,9 @@
       "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_nodes_database_node_rationale_8",
-      "target": "src_dev_ops_sim_nodes_database_node_databaseconfig"
+      "target": "src_dev_ops_sim_nodes_database_node_databaseconfig",
+      "confidence_score": 1.0
     },
     {
       "relation": "rationale_for",
@@ -1713,9 +2219,9 @@
       "source_location": "L19",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_nodes_load_balancer_rationale_19",
-      "target": "src_dev_ops_sim_nodes_load_balancer_loadbalancerconfig"
+      "target": "src_dev_ops_sim_nodes_load_balancer_loadbalancerconfig",
+      "confidence_score": 1.0
     },
     {
       "relation": "rationale_for",
@@ -1724,9 +2230,9 @@
       "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "src_dev_ops_sim_nodes_traffic_generator_rationale_7",
-      "target": "src_dev_ops_sim_nodes_traffic_generator_trafficgeneratorconfig"
+      "target": "src_dev_ops_sim_nodes_traffic_generator_trafficgeneratorconfig",
+      "confidence_score": 1.0
     },
     {
       "relation": "uses",
@@ -1735,9 +2241,9 @@
       "source_location": "L2",
       "weight": 0.8,
       "_origin": "ast",
-      "confidence_score": 0.5,
       "source": "src_dev_ops_sim_nodes_application_server_applicationserver",
-      "target": "src_dev_ops_sim_core_request_request"
+      "target": "src_dev_ops_sim_core_request_request",
+      "confidence_score": 0.5
     },
     {
       "relation": "uses",
@@ -1746,9 +2252,9 @@
       "source_location": "L2",
       "weight": 0.8,
       "_origin": "ast",
-      "confidence_score": 0.5,
       "source": "src_dev_ops_sim_nodes_application_server_applicationserverconfig",
-      "target": "src_dev_ops_sim_core_request_request"
+      "target": "src_dev_ops_sim_core_request_request",
+      "confidence_score": 0.5
     },
     {
       "relation": "uses",
@@ -1757,9 +2263,9 @@
       "source_location": "L2",
       "weight": 0.8,
       "_origin": "ast",
-      "confidence_score": 0.5,
       "source": "src_dev_ops_sim_nodes_database_node_database",
-      "target": "src_dev_ops_sim_core_request_request"
+      "target": "src_dev_ops_sim_core_request_request",
+      "confidence_score": 0.5
     },
     {
       "relation": "uses",
@@ -1768,9 +2274,9 @@
       "source_location": "L2",
       "weight": 0.8,
       "_origin": "ast",
-      "confidence_score": 0.5,
       "source": "src_dev_ops_sim_nodes_database_node_databaseconfig",
-      "target": "src_dev_ops_sim_core_request_request"
+      "target": "src_dev_ops_sim_core_request_request",
+      "confidence_score": 0.5
     },
     {
       "relation": "uses",
@@ -1779,9 +2285,9 @@
       "source_location": "L3",
       "weight": 0.8,
       "_origin": "ast",
-      "confidence_score": 0.5,
       "source": "src_dev_ops_sim_nodes_traffic_generator_trafficgenerator",
-      "target": "src_dev_ops_sim_core_request_request"
+      "target": "src_dev_ops_sim_core_request_request",
+      "confidence_score": 0.5
     },
     {
       "relation": "uses",
@@ -1790,11 +2296,11 @@
       "source_location": "L3",
       "weight": 0.8,
       "_origin": "ast",
-      "confidence_score": 0.5,
       "source": "src_dev_ops_sim_nodes_traffic_generator_trafficgeneratorconfig",
-      "target": "src_dev_ops_sim_core_request_request"
+      "target": "src_dev_ops_sim_core_request_request",
+      "confidence_score": 0.5
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "2ea63238ed652ba19de30bf67b5cd9643d4cabd8"
+  "built_at_commit": "25b4b2b4178b7c5e1503fb1b1c6141e82448054b"
 }

@@ -1,8 +1,8 @@
 {
   "pyproject.toml": {
-    "mtime": 1786322013.507399,
-    "ast_hash": "6e35296edd32a7d2727d31199b0607b9",
-    "semantic_hash": "6e35296edd32a7d2727d31199b0607b9"
+    "mtime": 1786634082.8910823,
+    "ast_hash": "59c747b79e715da54adb868f571e7d88",
+    "semantic_hash": ""
   },
   "src/dev_ops_sim/__init__.py": {
     "mtime": 1786207994.4004974,
@@ -30,7 +30,7 @@
     "semantic_hash": "ff32dc90d8a7ea40c46f11168a4ed88b"
   },
   "src/dev_ops_sim/nodes/load_balancer.py": {
-    "mtime": 1786381448.0179408,
+    "mtime": 1786632595.1109593,
     "ast_hash": "8c16f0608bb4b71b087e7680fa00b90b",
     "semantic_hash": "8c16f0608bb4b71b087e7680fa00b90b"
   },
@@ -40,38 +40,78 @@
     "semantic_hash": "8196469d45cc8eeda1032d5b923e93ed"
   },
   "src/dev_ops_sim/st_ui/app.py": {
-    "mtime": 1786470142.7952669,
+    "mtime": 1786634082.8930929,
     "ast_hash": "6114aa0b26d95246a29a64c29f3d9d33",
     "semantic_hash": "6114aa0b26d95246a29a64c29f3d9d33"
   },
   "src/dev_ops_sim/st_ui/components/configuration.py": {
-    "mtime": 1786470142.7952669,
+    "mtime": 1786634082.8930929,
     "ast_hash": "0c665fb1e62fe0a34e27a9b99648640f",
     "semantic_hash": "0c665fb1e62fe0a34e27a9b99648640f"
   },
   "src/dev_ops_sim/st_ui/components/metrics.py": {
-    "mtime": 1786470142.7952669,
+    "mtime": 1786634082.8951018,
     "ast_hash": "85d0606f6249799f01f07e5dc0ea0d84",
     "semantic_hash": "85d0606f6249799f01f07e5dc0ea0d84"
   },
   "src/dev_ops_sim/st_ui/components/topology.py": {
-    "mtime": 1786470142.7952669,
+    "mtime": 1786634082.8971107,
     "ast_hash": "50bb2e080e1d99eaaf4b9cdd2626bd99",
     "semantic_hash": "50bb2e080e1d99eaaf4b9cdd2626bd99"
   },
   "src/dev_ops_sim/st_ui/icons.py": {
-    "mtime": 1786470142.7952669,
+    "mtime": 1786634082.8991184,
     "ast_hash": "45de302a1e90d0c615d834da2304ded6",
     "semantic_hash": "45de302a1e90d0c615d834da2304ded6"
   },
   "src/dev_ops_sim/st_ui/simulation.py": {
-    "mtime": 1786470142.7952669,
+    "mtime": 1786634082.9001267,
     "ast_hash": "0ea4d1020dba9998bebe842a76988c1a",
     "semantic_hash": "0ea4d1020dba9998bebe842a76988c1a"
   },
   "src/dev_ops_sim/st_ui/styles.py": {
-    "mtime": 1786470142.7952669,
+    "mtime": 1786634082.9021351,
     "ast_hash": "ec7bbcf537b382d976ff7ee46968331d",
     "semantic_hash": "ec7bbcf537b382d976ff7ee46968331d"
+  },
+  "src/solara_ui/components/canvas.py": {
+    "mtime": 1786634082.9041426,
+    "ast_hash": "3aadb07a4b4b3c5540351891d71d39df",
+    "semantic_hash": ""
+  },
+  "src/solara_ui/components/configuration_panel.py": {
+    "mtime": 1786634082.9041426,
+    "ast_hash": "0a73fb3af67fc7916ebb5976fc8697fb",
+    "semantic_hash": ""
+  },
+  "src/solara_ui/components/header.py": {
+    "mtime": 1786634082.9075341,
+    "ast_hash": "05eafcb720c8badde07f9945c7135c8b",
+    "semantic_hash": ""
+  },
+  "src/solara_ui/components/metrics_panel.py": {
+    "mtime": 1786634082.9075341,
+    "ast_hash": "5426cdcbf8b0a1ff0e0d264a8f351aef",
+    "semantic_hash": ""
+  },
+  "src/solara_ui/components/node_palette.py": {
+    "mtime": 1786634082.9075341,
+    "ast_hash": "b09f48205238a43a2a0239cd9f276262",
+    "semantic_hash": ""
+  },
+  "src/solara_ui/sol.py": {
+    "mtime": 1786634082.9075341,
+    "ast_hash": "bad82d9977de9bda8899581462705155",
+    "semantic_hash": ""
+  },
+  "INSTALLATION.md": {
+    "mtime": 1786381500.6832845,
+    "ast_hash": "8bf2fa406a5facb04aec169551abd9b5",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1786381500.6852925,
+    "ast_hash": "b5f153eea2c995a60ed4c491c52880e7",
+    "semantic_hash": ""
   }
 }
