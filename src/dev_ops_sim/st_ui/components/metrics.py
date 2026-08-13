@@ -59,3 +59,22 @@ def render_metrics(
             "server to finish processing requests."
         ),
     )
+
+    st.subheader("Node Flow")
+
+    flow_1, flow_2, flow_3 = st.columns(3)
+
+    flow_1.metric(
+        "Load Balancer Received",
+        result["balancer_received"],
+    )
+
+    flow_2.metric(
+        "Load Balancer Forwarded",
+        result["balancer_forwarded"],
+    )
+
+    flow_3.metric(
+        "Database Completed",
+        result["database_completed"],
+    )

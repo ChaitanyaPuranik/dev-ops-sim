@@ -8,14 +8,16 @@ STYLES = """
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 60px;
+    gap: 20px;
+    flex-wrap: wrap;
     margin-top: 40px;
     margin-bottom: 40px;
 }
 
 .simulation-node {
-    width: 260px;
-    padding: 30px;
+    width: 220px;
+    min-height: 220px;
+    padding: 20px;
     border: 1px solid rgba(128, 128, 128, 0.35);
     border-radius: 14px;
     text-align: center;
@@ -38,7 +40,7 @@ STYLES = """
 }
 
 .request-flow {
-    width: 250px;
+    width: 140px;
     text-align: center;
 }
 

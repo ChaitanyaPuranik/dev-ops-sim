@@ -10,3 +10,6 @@ __pycache__/
 
 # VSCode user-specific files
 .vscode/
+
+#Graphify
+graphify-out/cache/

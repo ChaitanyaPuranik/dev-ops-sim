@@ -1,0 +1,230 @@
+{
+  "communities": {
+    "0": [
+      "src_dev_ops_sim_core_request",
+      "src_dev_ops_sim_core_request_request",
+      "src_dev_ops_sim_nodes_database_node",
+      "src_dev_ops_sim_nodes_database_node_database",
+      "src_dev_ops_sim_nodes_database_node_database_init",
+      "src_dev_ops_sim_nodes_database_node_database_process_request",
+      "src_dev_ops_sim_nodes_database_node_database_run",
+      "src_dev_ops_sim_nodes_database_node_databaseconfig",
+      "src_dev_ops_sim_nodes_database_node_databaseconfig_post_init",
+      "src_dev_ops_sim_nodes_database_node_py_environment",
+      "src_dev_ops_sim_nodes_database_node_py_store",
+      "src_dev_ops_sim_nodes_database_node_rationale_8"
+    ],
+    "1": [
+      "src_dev_ops_sim_main",
+      "src_dev_ops_sim_main_main",
+      "src_dev_ops_sim_nodes_traffic_generator",
+      "src_dev_ops_sim_nodes_traffic_generator_py_environment",
+      "src_dev_ops_sim_nodes_traffic_generator_py_store",
+      "src_dev_ops_sim_nodes_traffic_generator_rationale_7",
+      "src_dev_ops_sim_nodes_traffic_generator_trafficgenerator",
+      "src_dev_ops_sim_nodes_traffic_generator_trafficgenerator_init",
+      "src_dev_ops_sim_nodes_traffic_generator_trafficgenerator_run",
+      "src_dev_ops_sim_nodes_traffic_generator_trafficgeneratorconfig",
+      "src_dev_ops_sim_nodes_traffic_generator_trafficgeneratorconfig_post_init"
+    ],
+    "2": [
+      "src_dev_ops_sim_nodes_application_server",
+      "src_dev_ops_sim_nodes_application_server_applicationserver",
+      "src_dev_ops_sim_nodes_application_server_applicationserver_init",
+      "src_dev_ops_sim_nodes_application_server_applicationserver_process_request",
+      "src_dev_ops_sim_nodes_application_server_applicationserver_run",
+      "src_dev_ops_sim_nodes_application_server_applicationserverconfig",
+      "src_dev_ops_sim_nodes_application_server_applicationserverconfig_post_init",
+      "src_dev_ops_sim_nodes_application_server_py_environment",
+      "src_dev_ops_sim_nodes_application_server_py_store",
+      "src_dev_ops_sim_nodes_application_server_rationale_8"
+    ],
+    "3": [
+      "src_dev_ops_sim_nodes_load_balancer",
+      "src_dev_ops_sim_nodes_load_balancer_load_balancing_algorithm",
+      "src_dev_ops_sim_nodes_load_balancer_loadbalancer",
+      "src_dev_ops_sim_nodes_load_balancer_loadbalancer_init",
+      "src_dev_ops_sim_nodes_load_balancer_loadbalancer_run",
+      "src_dev_ops_sim_nodes_load_balancer_loadbalancer_select_backend",
+      "src_dev_ops_sim_nodes_load_balancer_loadbalancer_select_random",
+      "src_dev_ops_sim_nodes_load_balancer_loadbalancer_select_round_robin",
+      "src_dev_ops_sim_nodes_load_balancer_py_environment",
+      "src_dev_ops_sim_nodes_load_balancer_py_store"
+    ],
+    "4": [
+      "src_dev_ops_sim_st_ui_app",
+      "src_dev_ops_sim_st_ui_components_configuration",
+      "src_dev_ops_sim_st_ui_components_configuration_render_configuration",
+      "src_dev_ops_sim_st_ui_components_metrics",
+      "src_dev_ops_sim_st_ui_components_metrics_render_metrics",
+      "src_dev_ops_sim_st_ui_components_topology",
+      "src_dev_ops_sim_st_ui_components_topology_render_topology",
+      "src_dev_ops_sim_st_ui_styles",
+      "src_dev_ops_sim_st_ui_styles_load_styles"
+    ],
+    "5": [
+      "src_dev_ops_sim_nodes_load_balancer_loadbalancerconfig",
+      "src_dev_ops_sim_nodes_load_balancer_loadbalancerconfig_post_init",
+      "src_dev_ops_sim_nodes_load_balancer_rationale_19",
+      "src_dev_ops_sim_st_ui_simulation",
+      "src_dev_ops_sim_st_ui_simulation_run_simulation"
+    ],
+    "6": [
+      "src_dev_ops_sim_init",
+      "src_dev_ops_sim_init_main"
+    ],
+    "7": [
+      "pkg_dev_ops_sim"
+    ],
+    "8": [
+      "src_dev_ops_sim_st_ui_icons"
+    ]
+  },
+  "cohesion": {
+    "0": 0.24242424242424243,
+    "1": 0.23636363636363636,
+    "2": 0.24444444444444444,
+    "3": 0.26666666666666666,
+    "4": 0.2222222222222222,
+    "5": 0.5,
+    "6": 1.0,
+    "7": 1.0,
+    "8": 1.0
+  },
+  "gods": [
+    {
+      "id": "src_dev_ops_sim_core_request_request",
+      "label": "Request",
+      "degree": 12
+    },
+    {
+      "id": "src_dev_ops_sim_st_ui_simulation_run_simulation",
+      "label": "run_simulation()",
+      "degree": 10
+    },
+    {
+      "id": "src_dev_ops_sim_nodes_application_server_applicationserver",
+      "label": "ApplicationServer",
+      "degree": 9
+    },
+    {
+      "id": "src_dev_ops_sim_nodes_traffic_generator_trafficgenerator",
+      "label": "TrafficGenerator",
+      "degree": 8
+    },
+    {
+      "id": "src_dev_ops_sim_nodes_traffic_generator_trafficgeneratorconfig",
+      "label": "TrafficGeneratorConfig",
+      "degree": 8
+    },
+    {
+      "id": "src_dev_ops_sim_nodes_application_server_applicationserverconfig",
+      "label": "ApplicationServerConfig",
+      "degree": 8
+    },
+    {
+      "id": "src_dev_ops_sim_nodes_load_balancer_loadbalancer",
+      "label": "LoadBalancer",
+      "degree": 8
+    },
+    {
+      "id": "src_dev_ops_sim_nodes_database_node_database",
+      "label": "Database",
+      "degree": 7
+    },
+    {
+      "id": "src_dev_ops_sim_nodes_database_node_databaseconfig",
+      "label": "DatabaseConfig",
+      "degree": 7
+    },
+    {
+      "id": "src_dev_ops_sim_nodes_load_balancer_loadbalancerconfig",
+      "label": "LoadBalancerConfig",
+      "degree": 6
+    }
+  ],
+  "surprises": [
+    {
+      "source": "ApplicationServer",
+      "target": "Request",
+      "source_files": [
+        "src/dev_ops_sim/nodes/application_server.py",
+        "src/dev_ops_sim/core/request.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "uses",
+      "why": "inferred connection - not explicitly stated in source; bridges separate communities"
+    },
+    {
+      "source": "ApplicationServerConfig",
+      "target": "Request",
+      "source_files": [
+        "src/dev_ops_sim/nodes/application_server.py",
+        "src/dev_ops_sim/core/request.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "uses",
+      "why": "inferred connection - not explicitly stated in source; bridges separate communities"
+    },
+    {
+      "source": "TrafficGenerator",
+      "target": "Request",
+      "source_files": [
+        "src/dev_ops_sim/nodes/traffic_generator.py",
+        "src/dev_ops_sim/core/request.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "uses",
+      "why": "inferred connection - not explicitly stated in source; bridges separate communities"
+    },
+    {
+      "source": "TrafficGeneratorConfig",
+      "target": "Request",
+      "source_files": [
+        "src/dev_ops_sim/nodes/traffic_generator.py",
+        "src/dev_ops_sim/core/request.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "uses",
+      "why": "inferred connection - not explicitly stated in source; bridges separate communities"
+    },
+    {
+      "source": "Database",
+      "target": "Request",
+      "source_files": [
+        "src/dev_ops_sim/nodes/database_node.py",
+        "src/dev_ops_sim/core/request.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "uses",
+      "why": "inferred connection - not explicitly stated in source"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `run_simulation()` connect `run_simulation` to `Request`, `TrafficGenerator`, `ApplicationServer`, `LoadBalancer`, `app.py`?",
+      "why": "High betweenness centrality (0.398) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `LoadBalancer` connect `LoadBalancer` to `run_simulation`?",
+      "why": "High betweenness centrality (0.188) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `Request` connect `Request` to `TrafficGenerator`, `ApplicationServer`?",
+      "why": "High betweenness centrality (0.128) - this node is a cross-community bridge."
+    },
+    {
+      "type": "verify_inferred",
+      "question": "Are the 6 inferred relationships involving `Request` (e.g. with `ApplicationServer` and `ApplicationServerConfig`) actually correct?",
+      "why": "`Request` has 6 INFERRED edges - model-reasoned connections that need verification."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `dev-ops-sim` to the rest of the system?",
+      "why": "1 weakly-connected nodes found - possible documentation gaps or missing edges."
+    }
+  ]
+}

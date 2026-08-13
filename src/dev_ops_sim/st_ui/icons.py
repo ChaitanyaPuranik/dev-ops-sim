@@ -99,3 +99,70 @@ APPLICATION_SERVER_ICON = """
     />
 </svg>
 """
+
+
+LOAD_BALANCER_ICON = """
+<svg
+    class="node-icon"
+    viewBox="0 0 64 64"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+>
+    <rect
+        x="10"
+        y="10"
+        width="44"
+        height="44"
+        rx="8"
+        stroke="currentColor"
+        stroke-width="4"
+    />
+    <path
+        d="M20 22H44"
+        stroke="currentColor"
+        stroke-width="3"
+        stroke-linecap="round"
+    />
+    <path
+        d="M20 32H44"
+        stroke="currentColor"
+        stroke-width="3"
+        stroke-linecap="round"
+    />
+    <path
+        d="M20 42H44"
+        stroke="currentColor"
+        stroke-width="3"
+        stroke-linecap="round"
+    />
+</svg>
+"""
+
+
+DATABASE_ICON = """
+<svg
+    class="node-icon"
+    viewBox="0 0 64 64"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+>
+    <ellipse
+        cx="32"
+        cy="14"
+        rx="18"
+        ry="8"
+        stroke="currentColor"
+        stroke-width="4"
+    />
+    <path
+        d="M14 14V42C14 46.5 22 50 32 50C42 50 50 46.5 50 42V14"
+        stroke="currentColor"
+        stroke-width="4"
+    />
+    <path
+        d="M14 28C14 32.5 22 36 32 36C42 36 50 32.5 50 28"
+        stroke="currentColor"
+        stroke-width="4"
+    />
+</svg>
+"""

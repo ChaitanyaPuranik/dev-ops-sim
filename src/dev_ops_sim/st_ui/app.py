@@ -58,8 +58,11 @@ if run_button:
             traffic_rate=config["traffic_rate"],
             traffic_pattern=config["traffic_pattern"],
             traffic_duration=config["traffic_duration"],
+            load_balancer_algorithm=config["load_balancer_algorithm"],
             server_capacity=config["server_capacity"],
             processing_time=config["processing_time"],
+            database_capacity=config["database_capacity"],
+            database_query_time=config["database_query_time"],
         )
 
         st.session_state["simulation_result"] = result
