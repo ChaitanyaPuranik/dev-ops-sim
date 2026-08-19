@@ -51,6 +51,13 @@ class NodeDefinition:
     to the canvas.        
     """
     
+    config_options: dict[str, tuple[Any, ...]] | None = None
+    """
+    A dictionary of configuration options for the node type.
+    The keys are the names of the configuration options, and the values
+    are tuples of valid values for each option.
+    """
+    
 
 @dataclass(frozen=True)
 class CanvasNode:
@@ -75,6 +82,23 @@ class CanvasNode:
     """
     
     config: Any
+    """
+    Configuration object belonging to this specific node
+    instance, such as ApplicationServerConfig or DatabaseConfig.
+    """
+
+@dataclass(frozen=True)
+class CanvasEdge:
+    """
+    Represents a directed connection between two nodes
+    on the infrastructure canvas.
+    """
+
+    id: str
+    source_id: str
+    target_id: str
+
+
 
 
 NODE_DEFINITIONS = {
@@ -87,6 +111,9 @@ NODE_DEFINITIONS = {
             pattern="constant",
             duration=60,
         ),
+        config_options={
+            "pattern": ("constant", "burst", "random"),
+            },
     ),
 
     "load_balancer": NodeDefinition(
@@ -96,6 +123,9 @@ NODE_DEFINITIONS = {
         config_factory=lambda: LoadBalancerConfig(
             algorithm="round_robin",
         ),
+        config_options={
+            "algorithm": ("round_robin", "least_connections", "ip_hash"),
+        }
     ),
 
     "application_server": NodeDefinition(
@@ -127,4 +157,14 @@ def create_canvas_node(node_type: str) -> CanvasNode:
         id=str(uuid4()),
         definition=definition,
         config=definition.config_factory(),
+    )
+
+def create_canvas_edge(
+    source_id: str,
+    target_id: str,
+) -> CanvasEdge:
+    return CanvasEdge(
+        id=str(uuid4()),
+        source_id=source_id,
+        target_id=target_id,
     )
