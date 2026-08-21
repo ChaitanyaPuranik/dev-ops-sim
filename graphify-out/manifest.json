@@ -75,13 +75,13 @@
     "semantic_hash": "ec7bbcf537b382d976ff7ee46968331d"
   },
   "src/solara_ui/components/canvas.py": {
-    "mtime": 1786634082.9041426,
-    "ast_hash": "3aadb07a4b4b3c5540351891d71d39df",
+    "mtime": 1787112828.1560197,
+    "ast_hash": "ec52e8e9cae681b31838ad4ee6dfaa56",
     "semantic_hash": ""
   },
   "src/solara_ui/components/configuration_panel.py": {
-    "mtime": 1786634082.9041426,
-    "ast_hash": "0a73fb3af67fc7916ebb5976fc8697fb",
+    "mtime": 1787100155.9757802,
+    "ast_hash": "d05799ad93cbb2279c5d75d7106b71ee",
     "semantic_hash": ""
   },
   "src/solara_ui/components/header.py": {
@@ -95,13 +95,13 @@
     "semantic_hash": ""
   },
   "src/solara_ui/components/node_palette.py": {
-    "mtime": 1786634082.9075341,
-    "ast_hash": "b09f48205238a43a2a0239cd9f276262",
+    "mtime": 1786648275.0837276,
+    "ast_hash": "cdbd546c631b690e7117696440cf0fa9",
     "semantic_hash": ""
   },
   "src/solara_ui/sol.py": {
-    "mtime": 1786634082.9075341,
-    "ast_hash": "bad82d9977de9bda8899581462705155",
+    "mtime": 1787269613.9193718,
+    "ast_hash": "ac2348ea49073db3f07c924feed67476",
     "semantic_hash": ""
   },
   "INSTALLATION.md": {
@@ -110,8 +110,23 @@
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1786381500.6852925,
-    "ast_hash": "b5f153eea2c995a60ed4c491c52880e7",
+    "mtime": 1787112919.0069163,
+    "ast_hash": "0c5ec65e10f9d80a2b3e40e278dc863d",
+    "semantic_hash": ""
+  },
+  "src/solara_ui/components/canvas_config.py": {
+    "mtime": 1787112438.686303,
+    "ast_hash": "704ec4e6f76f880fe93ae561c9645f48",
+    "semantic_hash": ""
+  },
+  "src/solara_ui/node_registry.py": {
+    "mtime": 1787097026.1476126,
+    "ast_hash": "2fa33f3e4db9b8a852714fb507e84e42",
+    "semantic_hash": ""
+  },
+  "src/solara_ui/node_repo.py": {
+    "mtime": 1787269583.1942794,
+    "ast_hash": "c6f2c6d3f249a04c67213c013ccf9c73",
     "semantic_hash": ""
   }
 }

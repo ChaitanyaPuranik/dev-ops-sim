@@ -1,13 +1,12 @@
 import solara
 
-from typing import Any
 from dataclasses import replace
 from solara_ui.components.canvas import SimulationCanvas
 from solara_ui.components.configuration_panel import ConfigurationPanel
 from solara_ui.components.header import Header
 from solara_ui.components.metrics_panel import MetricsPanel
 from solara_ui.components.node_palette import NodePalette
-from solara_ui.node_registry import (create_canvas_node, create_canvas_edge)
+from solara_ui.node_repo import (add_node, select_node, delete_node, update_node_config, start_connection, complete_connection, cancel_connection, nodes, edges, selected_node_id, connecting_from_id)
 
 
 @solara.component
@@ -20,116 +19,6 @@ def Page():
     panel, and metrics panel.
     """
 
-    nodes = solara.use_reactive([])
-    edges = solara.use_reactive([])
-    selected_node_id = solara.use_reactive(None)
-    # When not None, the user is currently creating
-    # a connection beginning at this node.
-    connecting_from_id = solara.use_reactive(None)
-
-    def add_node(node_type: str):
-        """Create a new node and add it to the canvas."""
-        new_node = create_canvas_node(node_type)
-
-        nodes.set([
-            *nodes.value,
-            new_node,
-        ])
-
-        selected_node_id.set(new_node.id)
-
-    def select_node(node_id: str):
-        """Select a node currently displayed on the canvas."""
-        selected_node_id.set(node_id)
-
-    def delete_node(node_id: str):
-        """Remove a node from the canvas."""
-        nodes.set([
-            node
-            for node in nodes.value
-            if node.id != node_id
-        ])
-
-        edges.set([
-            edge
-            for edge in edges.value
-            if edge.source_id != node_id and edge.target_id != node_id
-        ])
-        if selected_node_id.value == node_id:
-            selected_node_id.set(None)
-            
-        if connecting_from_id.value == node_id:
-            connecting_from_id.set(None)
-
-    def update_node_config(
-        node_id: str,
-        field_name: str,
-        value: Any,
-    ):
-        """
-        Replace the selected node's config with an updated
-        dataclass instance.
-        """
-
-        updated_nodes = []
-
-        for node in nodes.value:
-            if node.id != node_id:
-                updated_nodes.append(node)
-                continue
-
-            updated_config = replace(
-                node.config,
-                **{
-                    field_name: value,
-                },
-            )
-
-            updated_node = replace(
-                node,
-                config=updated_config,
-            )
-
-            updated_nodes.append(updated_node)
-
-        nodes.set(updated_nodes)
-    
-    def start_connection(node_id: str):
-        connecting_from_id.set(node_id)
-
-    def cancel_connection():
-        connecting_from_id.set(None)
-
-    def complete_connection(target_id: str):
-        source_id = connecting_from_id.value
-
-        if source_id is None:
-            return
-
-        if source_id == target_id:
-            connecting_from_id.set(None)
-            return
-
-        # Avoid duplicate directed edges.
-        already_exists = any(
-            edge.source_id == source_id
-            and edge.target_id == target_id
-            for edge in edges.value
-        )
-
-        if not already_exists:
-            edges.set(
-                [
-                    *edges.value,
-                    create_canvas_edge(
-                        source_id=source_id,
-                        target_id=target_id,
-                    ),
-                ]
-            )
-
-        connecting_from_id.set(None)
-    
     selected_node = next(
         (
             node

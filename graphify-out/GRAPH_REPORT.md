@@ -1,99 +1,101 @@
-# Graph Report - dev-ops-sim  (2026-08-13)
+# Graph Report - dev-ops-sim  (2026-08-21)
 
 ## Corpus Check
-- 23 files · ~2,449 words
+- 26 files · ~3,998 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 82 nodes · 116 edges · 13 communities (9 shown, 4 thin omitted)
-- Extraction: 95% EXTRACTED · 5% INFERRED · 0% AMBIGUOUS · INFERRED: 6 edges (avg confidence: 0.5)
+- 115 nodes · 220 edges · 11 communities (9 shown, 2 thin omitted)
+- Extraction: 83% EXTRACTED · 17% INFERRED · 0% AMBIGUOUS · INFERRED: 37 edges (avg confidence: 0.56)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `25b4b2b4`
+- Built from commit: `c6508912`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
-- Database
-- TrafficGeneratorConfig
-- ApplicationServerConfig
-- run_simulation
+- ApplicationServer
+- TrafficGenerator
+- LoadBalancer
 - app.py
 - Page
 - dev-ops-sim
-- Request
-- ApplicationServer
-- README.md
+- node_registry.py
+- DevOps Sim
 
 ## God Nodes (most connected - your core abstractions)
-1. `Request` - 12 edges
-2. `run_simulation()` - 10 edges
-3. `ApplicationServer` - 9 edges
-4. `ApplicationServerConfig` - 8 edges
-5. `LoadBalancer` - 8 edges
-6. `TrafficGeneratorConfig` - 8 edges
-7. `TrafficGenerator` - 8 edges
-8. `DatabaseConfig` - 7 edges
-9. `Database` - 7 edges
-10. `Page()` - 7 edges
+1. `CanvasNode` - 17 edges
+2. `CanvasEdge` - 15 edges
+3. `Page()` - 15 edges
+4. `ApplicationServer` - 13 edges
+5. `Request` - 12 edges
+6. `ApplicationServerConfig` - 12 edges
+7. `LoadBalancer` - 12 edges
+8. `TrafficGeneratorConfig` - 12 edges
+9. `TrafficGenerator` - 12 edges
+10. `DatabaseConfig` - 11 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `ApplicationServer` --uses--> `Request`  [INFERRED]
-  src/dev_ops_sim/nodes/application_server.py → src/dev_ops_sim/core/request.py
-- `ApplicationServerConfig` --uses--> `Request`  [INFERRED]
-  src/dev_ops_sim/nodes/application_server.py → src/dev_ops_sim/core/request.py
-- `Database` --uses--> `Request`  [INFERRED]
-  src/dev_ops_sim/nodes/database_node.py → src/dev_ops_sim/core/request.py
-- `DatabaseConfig` --uses--> `Request`  [INFERRED]
-  src/dev_ops_sim/nodes/database_node.py → src/dev_ops_sim/core/request.py
+- `TrafficGenerator` --uses--> `Request`  [INFERRED]
+  src/dev_ops_sim/nodes/traffic_generator.py → src/dev_ops_sim/core/request.py
 - `TrafficGeneratorConfig` --uses--> `Request`  [INFERRED]
   src/dev_ops_sim/nodes/traffic_generator.py → src/dev_ops_sim/core/request.py
+- `CanvasEdge` --uses--> `ApplicationServerConfig`  [INFERRED]
+  src/solara_ui/node_registry.py → src/dev_ops_sim/nodes/application_server.py
+- `CanvasNode` --uses--> `ApplicationServerConfig`  [INFERRED]
+  src/solara_ui/node_registry.py → src/dev_ops_sim/nodes/application_server.py
+- `CanvasEdge` --uses--> `ApplicationServer`  [INFERRED]
+  src/solara_ui/node_registry.py → src/dev_ops_sim/nodes/application_server.py
 
 ## Import Cycles
 - None detected.
 
-## Communities (13 total, 4 thin omitted)
+## Communities (11 total, 2 thin omitted)
 
-### Community 0 - "Database"
+### Community 0 - "ApplicationServer"
+Cohesion: 0.14
+Nodes (14): Request, ApplicationServer, ApplicationServerConfig, Environment, Store, Configuration for the ApplicationServer., Database, DatabaseConfig (+6 more)
+
+### Community 1 - "TrafficGenerator"
 Cohesion: 0.24
-Nodes (5): Database, DatabaseConfig, Environment, Store, Configuration for the Database.
+Nodes (6): main(), Environment, Store, Configuration for the TrafficGenerator., TrafficGenerator, TrafficGeneratorConfig
 
-### Community 1 - "TrafficGeneratorConfig"
-Cohesion: 0.33
-Nodes (4): Environment, Store, Configuration for the TrafficGenerator., TrafficGeneratorConfig
-
-### Community 2 - "ApplicationServerConfig"
-Cohesion: 0.29
-Nodes (4): ApplicationServerConfig, Environment, Store, Configuration for the ApplicationServer.
-
-### Community 3 - "run_simulation"
-Cohesion: 0.20
-Nodes (7): load_balancing_algorithm(), LoadBalancer, LoadBalancerConfig, Environment, Store, Configuration for the LoadBalancer., run_simulation()
+### Community 3 - "LoadBalancer"
+Cohesion: 0.21
+Nodes (6): load_balancing_algorithm(), LoadBalancer, LoadBalancerConfig, Environment, Store, Configuration for the LoadBalancer.
 
 ### Community 4 - "app.py"
 Cohesion: 0.22
 Nodes (4): render_configuration(), render_metrics(), render_topology(), load_styles()
 
 ### Community 5 - "Page"
-Cohesion: 0.14
-Nodes (12): component, SimulationCanvas(), ConfigurationPanel(), component, Header(), component, MetricsPanel(), component (+4 more)
+Cohesion: 0.12
+Nodes (15): Header(), component, MetricsPanel(), component, NodePalette(), component, NodeRepository, Any (+7 more)
+
+### Community 9 - "node_registry.py"
+Cohesion: 0.19
+Nodes (16): build_svg(), edge_coordinates(), node_position(), Calculate arrow endpoints on the boundary of source and target node boxes., component, SimulationCanvas(), ConfigurationPanel(), Any (+8 more)
 
 ## Knowledge Gaps
-- **2 isolated node(s):** `dev-ops-sim`, `DevOps Sim`
+- **2 isolated node(s):** `dev-ops-sim`, `Run the app`
   These have ≤1 connection - possible missing edges or undocumented components.
-- **4 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **2 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `run_simulation()` connect `run_simulation` to `Database`, `TrafficGeneratorConfig`, `ApplicationServerConfig`, `app.py`, `Request`, `ApplicationServer`?**
-  _High betweenness centrality (0.218) - this node is a cross-community bridge._
-- **Why does `Request` connect `Request` to `Database`, `TrafficGeneratorConfig`, `ApplicationServerConfig`, `ApplicationServer`?**
-  _High betweenness centrality (0.070) - this node is a cross-community bridge._
-- **Are the 6 inferred relationships involving `Request` (e.g. with `ApplicationServer` and `ApplicationServerConfig`) actually correct?**
-  _`Request` has 6 INFERRED edges - model-reasoned connections that need verification._
-- **What connects `dev-ops-sim`, `DevOps Sim` to the rest of the system?**
-  _2 weakly-connected nodes found - possible documentation gaps or missing edges._
-- **Should `Page` be split into smaller, more focused modules?**
-  _Cohesion score 0.1437908496732026 - nodes in this community are weakly interconnected._
+- **Why does `CanvasNode` connect `node_registry.py` to `ApplicationServer`, `TrafficGenerator`, `LoadBalancer`?**
+  _High betweenness centrality (0.220) - this node is a cross-community bridge._
+- **Why does `run_simulation()` connect `ApplicationServer` to `TrafficGenerator`, `LoadBalancer`, `app.py`?**
+  _High betweenness centrality (0.152) - this node is a cross-community bridge._
+- **Why does `SimulationCanvas()` connect `node_registry.py` to `Page`?**
+  _High betweenness centrality (0.142) - this node is a cross-community bridge._
+- **Are the 8 inferred relationships involving `CanvasNode` (e.g. with `ApplicationServer` and `ApplicationServerConfig`) actually correct?**
+  _`CanvasNode` has 8 INFERRED edges - model-reasoned connections that need verification._
+- **Are the 8 inferred relationships involving `CanvasEdge` (e.g. with `ApplicationServer` and `ApplicationServerConfig`) actually correct?**
+  _`CanvasEdge` has 8 INFERRED edges - model-reasoned connections that need verification._
+- **Are the 7 inferred relationships involving `Page()` (e.g. with `.add_node()` and `.cancel_connection()`) actually correct?**
+  _`Page()` has 7 INFERRED edges - model-reasoned connections that need verification._
+- **Are the 4 inferred relationships involving `ApplicationServer` (e.g. with `Request` and `CanvasEdge`) actually correct?**
+  _`ApplicationServer` has 4 INFERRED edges - model-reasoned connections that need verification._
