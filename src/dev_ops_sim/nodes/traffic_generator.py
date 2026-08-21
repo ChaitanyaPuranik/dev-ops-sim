@@ -1,6 +1,7 @@
 import simpy
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from dev_ops_sim.core.request import Request
+from dev_ops_sim.core.request_config import RequestConfig
 
 @dataclass
 class TrafficGeneratorConfig:
@@ -22,6 +23,9 @@ class TrafficGeneratorConfig:
     '''
     duration(float): Amount of simulated time, in seconds, for which traffic is generated.
     '''
+
+    request_config: RequestConfig = field(default_factory=RequestConfig)
+
 
     def __post_init__(self):
         if self.rate <= 0:
@@ -54,11 +58,19 @@ class TrafficGenerator:
         total_requests = int(
             self.config.rate * self.config.duration
         )
+        config = self.config.request_config
 
         for _ in range(total_requests):
             request = Request(
                 id=self.requests_generated,
                 created_at=self.env.now,
+                request_type=config.request_type,
+                payload_bytes=config.payload_bytes,
+                cpu_units=config.cpu_units,
+                memory_mb=config.memory_mb,
+                db_read_units=config.db_read_units,
+                db_write_units=config.db_write_units,
+                timeout=config.timeout,
             )
 
             yield self.output.put(request)
